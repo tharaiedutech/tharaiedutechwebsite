@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Confirmed - THARAI EduTech</title>
+    <link rel="stylesheet" href="styles/main.css?v=92.0">
+    <style>
+        .confirmation-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #7C3AED 0%, #EC4899 100%);
+            padding: 2rem;
+        }
+        
+        .confirmation-card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        .success-icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .confirmation-card h1 {
+            color: #1F2937;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .confirmation-card p {
+            color: #6B7280;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        
+        .btn-home {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #7C3AED 0%, #EC4899 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .btn-home:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
+        }
+        
+        .auto-redirect {
+            margin-top: 2rem;
+            color: #9CA3AF;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-container">
+        <div class="confirmation-card">
+            <div class="success-icon">✅</div>
+            <h1>Email Verified Successfully!</h1>
+            <p>
+                Thank you for confirming your email address. Your account is now fully activated and you can start exploring our courses!
+            </p>
+            <a href="index.html" class="btn-home">Go to Homepage</a>
+            <p class="auto-redirect">Redirecting automatically in <span id="countdown">5</span> seconds...</p>
+        </div>
+    </div>
+    
+    <script>
+        // Auto-redirect countdown
+        let seconds = 5;
+        const countdownElement = document.getElementById('countdown');
+        
+        const interval = setInterval(() => {
+            seconds--;
+            countdownElement.textContent = seconds;
+            
+            if (seconds <= 0) {
+                clearInterval(interval);
+                window.location.href = 'index.html';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

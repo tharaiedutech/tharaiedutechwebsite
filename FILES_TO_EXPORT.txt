@@ -1,0 +1,194 @@
+═══════════════════════════════════════════════════════════
+  THARAI EDUTECH - COMPLETE FILE LIST FOR EXPORT
+═══════════════════════════════════════════════════════════
+
+✅ ESSENTIAL FILES (MUST HAVE - Copy These!)
+═══════════════════════════════════════════════════════════
+
+📄 HTML Pages (7 files):
+├── index.html                    [Home page - 106 courses, 13 tracks]
+├── courses.html                  [Course catalog with all 106 courses]
+├── course-detail.html            [Individual course detail template]
+├── about.html                    [About THARAI EduTech page]
+├── contact.html                  [Contact Us page with form]
+├── trainings.html                [Corporate training programs]
+└── enrollment-modal.html         [Enrollment form modal component]
+
+🎨 CSS Stylesheets (3 files):
+├── styles/main.css               [Global styles, navigation, footer]
+├── styles/courses.css            [Course cards and catalog layout]
+└── styles/course-detail.css      [Course detail page styling]
+
+⚙️ JavaScript Files (4 files):
+├── scripts/main.js               [Main navigation and interactions]
+├── scripts/courses.js            [Course filtering and search]
+├── scripts/course-detail.js      [Course detail page logic]
+└── scripts/enrollment.js         [Enrollment form + EmailJS]
+
+🖼️ Images:
+└── images/tharai-tree-logo.png   [Main logo - 50x50px]
+
+═══════════════════════════════════════════════════════════
+
+📚 DOCUMENTATION (Recommended - Copy These!)
+═══════════════════════════════════════════════════════════
+
+├── DEPLOYMENT_GUIDE.md           [How to transfer and run]
+├── EMAILJS_SETUP_GUIDE.md        [Email form setup instructions]
+├── EXPORT_CHECKLIST.md           [Export verification checklist]
+└── FILES_TO_EXPORT.txt           [This file - complete file list]
+
+═══════════════════════════════════════════════════════════
+
+🔧 HELPER SCRIPTS (Optional)
+═══════════════════════════════════════════════════════════
+
+├── create-export.sh              [Mac/Linux - Auto create ZIP]
+├── create-export.bat             [Windows - Export helper]
+└── server.py                     [Python server script]
+
+═══════════════════════════════════════════════════════════
+
+❌ DO NOT COPY (Old/Backup/Test Files)
+═══════════════════════════════════════════════════════════
+
+├── courses_old_backup.html       [Old version - ignore]
+├── courses_new_content.html      [Test file - ignore]
+├── index-simple.html             [Test file - ignore]
+├── test.html                     [Test file - ignore]
+├── test-course.html              [Test file - ignore]
+├── tracks_template.html          [Template - ignore]
+├── BRANDING_UPDATE_SUMMARY.md    [Dev notes - optional]
+├── COURSE_STRUCTURE_2026.md      [Dev notes - optional]
+├── IMPLEMENTATION_PROGRESS.md    [Dev notes - optional]
+├── IMPLEMENTATION_STATUS.md      [Dev notes - optional]
+├── LOGO_INSTRUCTIONS.md          [Dev notes - optional]
+└── PROJECT_NOTES.md              [Dev notes - optional]
+
+═══════════════════════════════════════════════════════════
+
+📁 FOLDER STRUCTURE TO MAINTAIN
+═══════════════════════════════════════════════════════════
+
+Tharaisite/
+│
+├── index.html
+├── courses.html
+├── course-detail.html
+├── about.html
+├── contact.html
+├── trainings.html
+├── enrollment-modal.html
+│
+├── styles/
+│   ├── main.css
+│   ├── courses.css
+│   └── course-detail.css
+│
+├── scripts/
+│   ├── main.js
+│   ├── courses.js
+│   ├── course-detail.js
+│   └── enrollment.js
+│
+├── images/
+│   └── tharai-tree-logo.png
+│
+└── (Documentation files)
+
+═══════════════════════════════════════════════════════════
+
+🚀 QUICK EXPORT METHODS
+═══════════════════════════════════════════════════════════
+
+METHOD 1: Automatic (Mac/Linux)
+─────────────────────────────────
+1. Open Terminal
+2. cd /Users/bnedumaran/Documents/Tharaisite
+3. ./create-export.sh
+4. Find ZIP file in parent folder
+
+METHOD 2: Manual ZIP (Mac)
+─────────────────────────────────
+1. Go to /Users/bnedumaran/Documents/
+2. Right-click "Tharaisite" folder
+3. Click "Compress Tharaisite"
+4. Get Tharaisite.zip
+
+METHOD 3: Manual ZIP (Windows)
+─────────────────────────────────
+1. Right-click "Tharaisite" folder
+2. Send to → Compressed (zipped) folder
+3. Get Tharaisite.zip
+
+METHOD 4: Copy Entire Folder to USB
+─────────────────────────────────
+1. Plug in USB drive
+2. Copy entire "Tharaisite" folder
+3. Paste to USB drive
+4. Safely eject
+
+═══════════════════════════════════════════════════════════
+
+✅ VERIFICATION CHECKLIST (On New System)
+═══════════════════════════════════════════════════════════
+
+After transferring, verify these work:
+
+□ Home page loads (index.html)
+□ Logo appears in header
+□ Navigation menu works
+□ Mega menu shows 13 tracks
+□ All 5 pages load (Home, Courses, About, Contact, Training)
+□ Course cards display properly
+□ Footer shows on all pages
+□ Floating home button (🏠) appears on sub-pages
+□ Styles load correctly (colors, fonts, layout)
+□ Enrollment modal opens (if integrated)
+
+═══════════════════════════════════════════════════════════
+
+📊 ESTIMATED SIZES
+═══════════════════════════════════════════════════════════
+
+HTML files (7):        ~600 KB
+CSS files (3):         ~120 KB
+JS files (4):          ~50 KB
+Images:                ~50 KB
+Documentation:         ~40 KB
+─────────────────────────────────
+TOTAL (Essential):     ~860 KB (less than 1 MB!)
+TOTAL (With docs):     ~900 KB
+
+Very small and easy to transfer! ✅
+
+═══════════════════════════════════════════════════════════
+
+🎯 CRITICAL INFORMATION TO NOTE
+═══════════════════════════════════════════════════════════
+
+Contact Email:     tharaiedutech@gmail.com
+Phone Numbers:     044-79683920, 9363730040
+Brand Name:        THARAI EduTech
+Primary Color:     Purple (#7C3AED)
+Accent Color:      Pink (#EC4899) / Green (#10B981)
+Total Courses:     106 courses
+Total Tracks:      13 tracks
+
+EmailJS Config (if set up):
+├── Public Key:    [Fill in after setup]
+├── Service ID:    [Fill in after setup]
+└── Template ID:   [Fill in after setup]
+
+═══════════════════════════════════════════════════════════
+
+📞 NEED HELP?
+═══════════════════════════════════════════════════════════
+
+See: DEPLOYMENT_GUIDE.md for detailed transfer instructions
+See: EMAILJS_SETUP_GUIDE.md for email integration setup
+See: EXPORT_CHECKLIST.md for step-by-step verification
+
+═══════════════════════════════════════════════════════════
+End of File List
+═══════════════════════════════════════════════════════════

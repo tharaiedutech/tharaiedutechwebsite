@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Job Opening - Admin - THARAI EduTech</title>
+    <link rel="stylesheet" href="styles/main.css?v=92.0">
+    <link rel="stylesheet" href="styles/admin.css?v=81.0">
+</head>
+<body>
+    <header class="admin-header">
+        <div class="container">
+            <h1>Post New Job Opening</h1>
+            <p>Create a job posting for THARAI EduTech careers page</p>
+        </div>
+    </header>
+
+    <main class="admin-main">
+        <div class="container">
+            <!-- Admin Login Gate -->
+            <section id="adminLoginSection" class="admin-login-card">
+                <h2>🔒 Staff Login</h2>
+                <p>Log in with your staff account to manage job postings.</p>
+                <form id="adminLoginForm">
+                    <div class="form-group">
+                        <label for="adminEmail">Email</label>
+                        <input type="email" id="adminEmail" name="email" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="adminPassword">Password</label>
+                        <input type="password" id="adminPassword" name="password" required>
+                    </div>
+                    <div id="adminLoginError" class="error-message" style="display: none;"></div>
+                    <button type="submit" class="btn-primary">Login</button>
+                </form>
+            </section>
+
+            <!-- Job Posting Form (shown after login) -->
+            <div id="jobPostingSection" style="display: none;">
+                <div class="admin-toolbar">
+                    <a href="admin-manage-jobs.html" class="btn-secondary">📋 Manage Existing Jobs</a>
+                    <button type="button" id="adminLogoutBtn" class="btn-logout">Logout</button>
+                </div>
+
+            <form id="jobPostingForm" class="job-posting-form">
+                
+                <!-- Basic Information -->
+                <section class="form-section">
+                    <h2>📋 Basic Information</h2>
+                    
+                    <div class="form-group">
+                        <label for="jobTitle">Job Title <span class="required">*</span></label>
+                        <input type="text" id="jobTitle" name="job_title" required 
+                               placeholder="e.g., AI & Machine Learning Trainer">
+                        <small>The main title of the position</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jobCategory">Job Category <span class="required">*</span></label>
+                        <select id="jobCategory" name="job_category" required>
+                            <option value="">Select Category</option>
+                            <option value="trainer">Trainer/Instructor</option>
+                            <option value="content">Content Development</option>
+                            <option value="marketing">Marketing & Sales</option>
+                            <option value="operations">Operations</option>
+                            <option value="tech">Technology/IT</option>
+                            <option value="admin">Administration</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="department">Track / Domain <span class="required">*</span></label>
+                        <select id="department" name="department" required>
+                            <option value="">Select Track</option>
+                            <option value="ai-ml">AI & Machine Learning</option>
+                            <option value="data-science">Data Science & ML</option>
+                            <option value="analytics-bi">Data Analytics & BI</option>
+                            <option value="data-engineering">Data Engineering</option>
+                            <option value="cloud-devops">Cloud & DevOps</option>
+                            <option value="fullstack">Full Stack Development</option>
+                            <option value="salesforce">Salesforce</option>
+                            <option value="automation">Automation & RPA</option>
+                            <option value="programming">Programming</option>
+                            <option value="mobile">Mobile App Development</option>
+                            <option value="security">Cybersecurity</option>
+                            <option value="design">UI/UX Design</option>
+                            <option value="dsa">Data Structures & Algorithms</option>
+                            <option value="ai-nocode">AI Tools (No-Code)</option>
+                            <option value="databases">Databases & Data Management</option>
+                            <option value="quantum">Quantum Computing</option>
+                            <option value="general">General/Administration</option>
+                            <option value="other">Other (Specify Below)</option>
+                        </select>
+                        <small>Matches the course tracks shown on the site — used to auto-fill a suggested job description below.</small>
+                    </div>
+
+                    <div class="form-group" id="customDepartmentGroup" style="display: none;">
+                        <label for="customDepartment">Custom Department/Domain <span class="required">*</span></label>
+                        <input type="text" id="customDepartment" name="custom_department"
+                               placeholder="e.g., Blockchain, Game Development, etc.">
+                        <small>Enter the custom department name</small>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="employmentType">Employment Type <span class="required">*</span></label>
+                            <select id="employmentType" name="employment_type" required>
+                                <option value="">Select Type</option>
+                                <option value="full-time">Full-Time</option>
+                                <option value="part-time">Part-Time</option>
+                                <option value="contract">Contract</option>
+                                <option value="freelance">Freelance</option>
+                                <option value="internship">Internship</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="workMode">Work Mode <span class="required">*</span></label>
+                            <select id="workMode" name="work_mode" required>
+                                <option value="">Select Mode</option>
+                                <option value="remote">Remote</option>
+                                <option value="hybrid">Hybrid</option>
+                                <option value="onsite">On-site</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" name="location" 
+                               placeholder="e.g., Anywhere in India, Chennai, Remote">
+                        <small>Leave blank for "Anywhere" or specify city</small>
+                    </div>
+                </section>
+
+                <!-- Experience & Qualifications -->
+                <section class="form-section">
+                    <h2>🎓 Experience & Qualifications</h2>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="minExperience">Minimum Experience (years) <span class="required">*</span></label>
+                            <input type="number" id="minExperience" name="min_experience" min="0" max="30" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="maxExperience">Maximum Experience (years)</label>
+                            <input type="number" id="maxExperience" name="max_experience" min="0" max="30">
+                            <small>Leave blank for "or more"</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="education">Education Qualification <span class="required">*</span></label>
+                        <select id="education" name="education" required>
+                            <option value="">Select Qualification</option>
+                            <option value="any">Any Graduate</option>
+                            <option value="btech">B.Tech/B.E.</option>
+                            <option value="mtech">M.Tech/M.E.</option>
+                            <option value="mca">MCA</option>
+                            <option value="bsc">B.Sc.</option>
+                            <option value="msc">M.Sc.</option>
+                            <option value="phd">Ph.D.</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="certifications">Required Certifications (Optional)</label>
+                        <input type="text" id="certifications" name="certifications" 
+                               placeholder="e.g., AWS Certified, Salesforce Admin, etc.">
+                    </div>
+                </section>
+
+                <!-- Job Description -->
+                <section class="form-section">
+                    <h2>📝 Job Description</h2>
+
+                    <div class="form-group">
+                        <button type="button" id="autoFillBtn" class="btn-secondary">✨ Auto-fill Suggested Content</button>
+                        <small>Select a Job Category and Track above first. Fills in the description, responsibilities, and requirements below — you can still edit anything before posting.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="shortDescription">Short Description (1 line) <span class="required">*</span></label>
+                        <textarea id="shortDescription" name="short_description" rows="2" required
+                                  placeholder="Brief 1-line summary of the role"></textarea>
+                        <small>This appears on the job card (max 150 characters)</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="aboutRole">About the Role <span class="required">*</span></label>
+                        <textarea id="aboutRole" name="about_role" rows="5" required
+                                  placeholder="Detailed description of what this role involves..."></textarea>
+                    </div>
+                </section>
+
+                <!-- Responsibilities -->
+                <section class="form-section">
+                    <h2>✅ Key Responsibilities</h2>
+                    <p class="section-note">List the main responsibilities (one per line)</p>
+                    
+                    <div class="form-group">
+                        <label for="responsibilities">Responsibilities <span class="required">*</span></label>
+                        <textarea id="responsibilities" name="responsibilities" rows="6" required
+                                  placeholder="Enter each responsibility on a new line&#10;- Develop and deliver training sessions&#10;- Create course content and curriculum&#10;- Mentor students and provide guidance"></textarea>
+                    </div>
+                </section>
+
+                <!-- Requirements -->
+                <section class="form-section">
+                    <h2>🎯 Requirements & Skills</h2>
+                    
+                    <div class="form-group">
+                        <label for="requirements">Must-Have Requirements <span class="required">*</span></label>
+                        <textarea id="requirements" name="requirements" rows="6" required
+                                  placeholder="Enter each requirement on a new line&#10;- Expert knowledge in Python and Machine Learning&#10;- Strong communication and presentation skills&#10;- Experience teaching or training professionals"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="niceToHave">Nice-to-Have Skills (Optional)</label>
+                        <textarea id="niceToHave" name="nice_to_have" rows="4"
+                                  placeholder="Bonus skills that are desirable but not mandatory"></textarea>
+                    </div>
+                </section>
+
+                <!-- Compensation & Benefits -->
+                <section class="form-section">
+                    <h2>💰 Compensation & Benefits</h2>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="minSalary">Minimum Salary (₹/month)</label>
+                            <input type="number" id="minSalary" name="min_salary" min="0" step="1000"
+                                   placeholder="e.g., 50000">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="maxSalary">Maximum Salary (₹/month)</label>
+                            <input type="number" id="maxSalary" name="max_salary" min="0" step="1000"
+                                   placeholder="e.g., 120000">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="negotiable" name="salary_negotiable">
+                            Salary is negotiable based on experience
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="benefits">Benefits Offered</label>
+                        <textarea id="benefits" name="benefits" rows="4"
+                                  placeholder="Enter benefits (one per line)&#10;- Health insurance&#10;- Flexible work hours&#10;- Learning allowance"></textarea>
+                    </div>
+                </section>
+
+                <!-- Additional Details -->
+                <section class="form-section">
+                    <h2>📌 Additional Details</h2>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="positions">Number of Openings <span class="required">*</span></label>
+                            <input type="number" id="positions" name="positions" min="1" max="50" value="1" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="applicationDeadline">Application Deadline</label>
+                            <input type="date" id="applicationDeadline" name="application_deadline">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactEmail">Contact Email for Applications <span class="required">*</span></label>
+                        <input type="email" id="contactEmail" name="contact_email" required
+                               value="tharaiedutech@gmail.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="isActive" name="is_active" checked>
+                            Publish this job posting immediately
+                        </label>
+                    </div>
+                </section>
+
+                <!-- Submit Button -->
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="window.history.back()">Cancel</button>
+                    <button type="submit" class="btn-primary">📤 Post Job Opening</button>
+                </div>
+
+            </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/api-config.js?v=82.0"></script>
+    <script src="scripts/job-posting.js?v=83.0"></script>
+</body>
+</html>

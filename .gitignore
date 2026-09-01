@@ -1,0 +1,31 @@
+# Secrets - never commit
+backend/.env
+*.env
+!*.env.example
+
+# Python
+backend/venv/
+__pycache__/
+*.pyc
+
+# OS / editor
+.DS_Store
+.vscode/
+
+# Logs
+*.log
+
+# Personal / backup files not needed to run the site
+*.numbers
+*.zip
+*.pdf
+*.xlsx
+courseDetails/
+*_BACKUP_*.html
+*.backup
+courses_old_backup.html
+index_BACKUP_*.html
+
+# Dead code left over from the pre-Postgres Supabase setup (unused, not
+# referenced by any page anymore)
+scripts/supabase-config.js

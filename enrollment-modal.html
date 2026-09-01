@@ -1,0 +1,280 @@
+<!-- Enrollment Modal - Add this before closing </body> tag -->
+<div id="enrollmentModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Quick Course Enrollment</h2>
+            <span class="close-modal" onclick="closeEnrollmentModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+            <p class="modal-subtitle">Fill in your details and we'll get back to you within 24 hours!</p>
+
+            <form id="enrollmentForm" action="https://formsubmit.co/tharaiedutech@gmail.com" method="POST">
+                <!-- Hidden fields for FormSubmit configuration -->
+                <input type="hidden" name="_subject" value="New Course Enrollment - THARAI EduTech">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+
+                <div class="form-group">
+                    <label for="enrollName">Full Name <span class="required">*</span></label>
+                    <input type="text" id="enrollName" name="Name" required placeholder="John Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="enrollEmail">Email Address <span class="required">*</span></label>
+                    <input type="email" id="enrollEmail" name="Email" required placeholder="your.email@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="enrollPhone">Mobile Number <span class="required">*</span></label>
+                    <input type="tel" id="enrollPhone" name="Phone" required placeholder="9876543210" maxlength="10" pattern="[6-9][0-9]{9}">
+                    <small>Enter 10-digit mobile number</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="enrollCourse">Course Interested In <span class="required">*</span></label>
+                    <select id="enrollCourse" name="Course" required>
+                        <option value="">-- Select a Course --</option>
+                        <optgroup label="AI & Machine Learning">
+                            <option value="Generative AI & LLMs">Generative AI & LLMs</option>
+                            <option value="Model Context Protocol">Model Context Protocol</option>
+                            <option value="Prompt Engineering">Prompt Engineering</option>
+                            <option value="Agentic AI Development">Agentic AI Development</option>
+                        </optgroup>
+                        <optgroup label="Data Science">
+                            <option value="Data Science with Python">Data Science with Python</option>
+                            <option value="Machine Learning">Machine Learning</option>
+                            <option value="Deep Learning">Deep Learning</option>
+                        </optgroup>
+                        <optgroup label="Data Analytics & BI">
+                            <option value="Power BI">Power BI</option>
+                            <option value="Tableau">Tableau</option>
+                            <option value="SQL for Analytics">SQL for Analytics</option>
+                        </optgroup>
+                        <optgroup label="Cloud & DevOps">
+                            <option value="AWS Cloud">AWS Cloud</option>
+                            <option value="Azure">Azure</option>
+                            <option value="Docker & Kubernetes">Docker & Kubernetes</option>
+                        </optgroup>
+                        <optgroup label="Full Stack Development">
+                            <option value="MERN Stack">MERN Stack</option>
+                            <option value="Java Full Stack">Java Full Stack</option>
+                            <option value="Python Full Stack">Python Full Stack</option>
+                        </optgroup>
+                        <optgroup label="Other Courses">
+                            <option value="Salesforce">Salesforce</option>
+                            <option value="Automation & RPA">Automation & RPA</option>
+                            <option value="Mobile Development">Mobile Development</option>
+                            <option value="Cybersecurity">Cybersecurity</option>
+                            <option value="UI/UX Design">UI/UX Design</option>
+                            <option value="DSA & Interview Prep">DSA & Interview Prep</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="enrollSecondaryEmail">Secondary Email (Optional)</label>
+                    <input type="email" id="enrollSecondaryEmail" name="Secondary_Email" placeholder="alternate@example.com">
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary-modal">Submit Enrollment</button>
+                    <button type="button" class="btn-secondary-modal" onclick="closeEnrollmentModal()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 0;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    padding: 1.5rem 2rem;
+    background: linear-gradient(135deg, #7C3AED 0%, #EC4899 100%);
+    color: white;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.close-modal {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.close-modal:hover {
+    transform: scale(1.2);
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-subtitle {
+    color: #6B7280;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.modal .form-group {
+    margin-bottom: 1.25rem;
+}
+
+.modal label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #374151;
+    font-weight: 500;
+}
+
+.required {
+    color: #EF4444;
+}
+
+.modal input,
+.modal select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.modal input:focus,
+.modal select:focus {
+    outline: none;
+    border-color: #7C3AED;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+.modal small {
+    display: block;
+    margin-top: 0.25rem;
+    color: #6B7280;
+    font-size: 0.875rem;
+}
+
+.error {
+    border-color: #EF4444 !important;
+}
+
+.error-message {
+    color: #EF4444;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-primary-modal,
+.btn-secondary-modal {
+    flex: 1;
+    padding: 0.875rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary-modal {
+    background: linear-gradient(135deg, #7C3AED 0%, #EC4899 100%);
+    color: white;
+}
+
+.btn-primary-modal:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
+}
+
+.btn-primary-modal:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-secondary-modal {
+    background: #F3F4F6;
+    color: #374151;
+}
+
+.btn-secondary-modal:hover {
+    background: #E5E7EB;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+
+    .modal-header {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .modal-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .modal-body {
+        padding: 1.5rem;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+}
+</style>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="scripts/enrollment.js"></script>

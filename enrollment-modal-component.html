@@ -1,0 +1,374 @@
+<!-- Course Enrollment Modal -->
+<div id="courseEnrollmentModal" class="auth-modal">
+<style scoped>
+/* ABSOLUTE OVERRIDE - INJECT WITH HTML */
+#courseEnrollmentModal label,
+#courseEnrollmentModal .form-group > label,
+label[for="modeOfStudy"],
+label[for="preferredSchedule"],
+label[for="enrollMessage"] {
+    color: rgb(0, 0, 0) !important;
+    font-weight: 700 !important;
+    opacity: 1 !important;
+}
+
+#courseEnrollmentModal select,
+select#modeOfStudy,
+select#preferredSchedule {
+    color: rgb(0, 0, 0) !important;
+    font-weight: 600 !important;
+    opacity: 1 !important;
+}
+
+#courseEnrollmentModal option,
+select#modeOfStudy option,
+select#preferredSchedule option {
+    color: rgb(0, 0, 0) !important;
+    font-weight: 600 !important;
+    opacity: 1 !important;
+}
+
+#courseEnrollmentModal .checkbox-label,
+label.checkbox-label,
+.checkbox-label > span {
+    color: rgb(0, 0, 0) !important;
+    font-weight: 700 !important;
+    opacity: 1 !important;
+}
+</style>
+    <div class="auth-modal-content">
+        <div class="auth-modal-header">
+            <h2>📚 Enroll in Course</h2>
+            <span class="close-auth-modal" onclick="closeCourseEnrollmentModal()">&times;</span>
+        </div>
+        <div class="auth-modal-body">
+            <div id="selectedCourseInfo" class="selected-course-info">
+                <!-- Will be populated dynamically -->
+            </div>
+
+            <p class="modal-subtitle">Fill in your details and we'll contact you within 24 hours to discuss schedule, fees, and next steps.</p>
+            
+            <form id="courseEnrollmentForm" action="https://formsubmit.co/tharaiedutech@gmail.com" method="POST">
+                <!-- Hidden fields for FormSubmit -->
+                <input type="hidden" name="_subject" value="🎓 New Course Enrollment Request">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="index.html?enrolled=success">
+                
+                <!-- Hidden fields for course info -->
+                <input type="hidden" id="enrollCourseHidden" name="Course">
+                <input type="hidden" id="enrollTrackHidden" name="Track">
+                
+                <div class="form-group">
+                    <label for="enrollFullName">Full Name <span class="required">*</span></label>
+                    <input type="text" id="enrollFullName" name="Full_Name" required placeholder="John Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="enrollEmailAddress">Email Address <span class="required">*</span></label>
+                    <input type="email" id="enrollEmailAddress" name="Email" required placeholder="your.email@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="enrollPhoneNumber">Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="enrollPhoneNumber" name="Phone" required placeholder="9444840567" pattern="[0-9]{10}">
+                    <small>Enter 10-digit mobile number</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="modeOfStudy" style="color:black;font-weight:bold">Mode of Study <span class="required">*</span></label>
+                    <select id="modeOfStudy" name="Mode_of_Study" required style="color:black;font-weight:bold">
+                        <option value="" style="color:black;font-weight:bold">-- Select Mode --</option>
+                        <option value="Online" style="color:black;font-weight:bold">🌐 Online</option>
+                        <option value="Offline" style="color:black;font-weight:bold">🏫 Offline (In-Person)</option>
+                        <option value="Hybrid" style="color:black;font-weight:bold">🔄 Hybrid (Online + Offline)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="preferredSchedule" style="color:black;font-weight:bold">Preferred Schedule <span class="required">*</span></label>
+                    <select id="preferredSchedule" name="Preferred_Schedule" required style="color:black;font-weight:bold">
+                        <option value="" style="color:black;font-weight:bold">-- Select Schedule --</option>
+                        <option value="Weekday Morning (9 AM - 12 PM)" style="color:black;font-weight:bold">Weekday Morning (9 AM - 12 PM)</option>
+                        <option value="Weekday Evening (6 PM - 9 PM)" style="color:black;font-weight:bold">Weekday Evening (6 PM - 9 PM)</option>
+                        <option value="Weekend Morning (9 AM - 1 PM)" style="color:black;font-weight:bold">Weekend Morning (9 AM - 1 PM)</option>
+                        <option value="Weekend Evening (2 PM - 6 PM)" style="color:black;font-weight:bold">Weekend Evening (2 PM - 6 PM)</option>
+                        <option value="Flexible - Discuss with team" style="color:black;font-weight:bold">Flexible - Discuss with team</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="enrollMessage" style="color:black;font-weight:bold">Message / Special Requirements (Optional)</label>
+                    <textarea id="enrollMessage" name="Message" rows="3" placeholder="Any specific requirements or questions?" style="color:black"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="agreeContact" required>
+                        <span style="color:black;font-weight:bold">I agree to be contacted by THARAI EduTech regarding this course</span>
+                    </label>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-auth-primary">
+                        Submit
+                    </button>
+                    <button type="button" class="btn-secondary-modal" onclick="closeCourseEnrollmentModal()">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+            
+            <div id="enrollmentError" class="error-message" style="display: none;"></div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* FORCE DARK TEXT - HIGHEST PRIORITY */
+#courseEnrollmentModal select,
+#courseEnrollmentModal select option,
+#courseEnrollmentModal textarea,
+#courseEnrollmentModal .checkbox-label span,
+#courseEnrollmentModal label {
+    color: #000000 !important;
+    opacity: 1 !important;
+    font-weight: 600 !important;
+}
+
+#courseEnrollmentModal select {
+    background-color: #FFFFFF !important;
+}
+
+#courseEnrollmentModal select option {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+}
+
+#courseEnrollmentModal .checkbox-label {
+    color: #000000 !important;
+}
+
+#courseEnrollmentModal .checkbox-label span {
+    color: #000000 !important;
+    opacity: 1 !important;
+}
+
+/* Selected Course Info Display */
+.selected-course-info {
+    background: linear-gradient(135deg, #F3E8FF 0%, #FCE7F3 100%);
+    border-left: 4px solid #7C3AED;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.selected-course-info h3 {
+    color: #7C3AED;
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+}
+
+.selected-course-info p {
+    color: #6B7280;
+    font-size: 0.95rem;
+    margin: 0.25rem 0;
+}
+
+/* Modal subtitle */
+.modal-subtitle {
+    color: #4B5563;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+/* Ensure all labels are dark and readable */
+.auth-modal label {
+    color: #374151 !important;
+    font-weight: 600 !important;
+}
+
+.auth-modal .required {
+    color: #DC2626;
+}
+
+.selected-course-info .course-icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+/* Select dropdown styling */
+.auth-modal select {
+    width: 100%;
+    padding: 0.875rem;
+    border: 2px solid #E5E7EB;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s;
+    background-color: white;
+    color: #1F2937;
+    cursor: pointer;
+}
+
+.auth-modal select:focus {
+    outline: none;
+    border-color: #7C3AED;
+    box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.1);
+}
+
+.auth-modal select option {
+    color: #1F2937;
+    padding: 0.5rem;
+}
+
+/* Textarea styling */
+.auth-modal textarea {
+    width: 100%;
+    padding: 0.875rem;
+    border: 2px solid #E5E7EB;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s;
+    resize: vertical;
+    color: #1F2937;
+}
+
+.auth-modal textarea:focus {
+    outline: none;
+    border-color: #7C3AED;
+    box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.1);
+}
+
+.auth-modal textarea::placeholder {
+    color: #9CA3AF;
+}
+
+/* Checkbox label styling */
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    cursor: pointer;
+    color: #1F2937;
+    font-weight: 500;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-top: 0.25rem;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #7C3AED;
+}
+
+.checkbox-label span {
+    flex: 1;
+    line-height: 1.5;
+    color: #374151;
+    font-size: 0.95rem;
+}
+
+/* Button group spacing */
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #E5E7EB;
+}
+
+#courseEnrollmentModal .btn-auth-primary,
+.btn-auth-primary {
+    width: auto !important;
+    padding: 0.75rem 1.5rem !important;
+    background: linear-gradient(135deg, #7C3AED 0%, #EC4899 100%);
+    color: white !important;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-auth-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
+}
+
+.btn-secondary-modal {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #7C3AED 0%, #EC4899 100%);
+    color: white !important;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-secondary-modal:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
+}
+
+@media (max-width: 768px) {
+    .form-actions {
+        flex-direction: column;
+    }
+}
+</style>
+
+<script>
+// FORCE BLACK TEXT - IMMEDIATE EXECUTION
+(function() {
+    'use strict';
+
+    function forceBlackText() {
+        const modal = document.getElementById('courseEnrollmentModal');
+        if (!modal) return;
+
+        // Force all labels
+        modal.querySelectorAll('label').forEach(el => {
+            el.style.setProperty('color', 'black', 'important');
+            el.style.setProperty('font-weight', 'bold', 'important');
+        });
+
+        // Force all selects
+        modal.querySelectorAll('select').forEach(el => {
+            el.style.setProperty('color', 'black', 'important');
+            el.style.setProperty('font-weight', 'bold', 'important');
+        });
+
+        // Force all options
+        modal.querySelectorAll('option').forEach(el => {
+            el.style.setProperty('color', 'black', 'important');
+            el.style.setProperty('font-weight', 'bold', 'important');
+        });
+
+        // Force checkbox span
+        modal.querySelectorAll('.checkbox-label span').forEach(el => {
+            el.style.setProperty('color', 'black', 'important');
+            el.style.setProperty('font-weight', 'bold', 'important');
+        });
+
+        // Force textarea
+        modal.querySelectorAll('textarea').forEach(el => {
+            el.style.setProperty('color', 'black', 'important');
+        });
+    }
+
+    // Execute immediately
+    forceBlackText();
+
+    // Execute after short delay
+    setTimeout(forceBlackText, 50);
+    setTimeout(forceBlackText, 200);
+    setTimeout(forceBlackText, 500);
+})();
+</script>

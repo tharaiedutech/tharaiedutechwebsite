@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Job Postings - Admin - THARAI EduTech</title>
+    <link rel="stylesheet" href="styles/main.css?v=92.0">
+    <link rel="stylesheet" href="styles/admin.css?v=82.0">
+</head>
+<body>
+    <header class="admin-header">
+        <div class="container">
+            <h1>Manage Job Postings</h1>
+            <p>View, publish/unpublish, and delete THARAI EduTech job openings</p>
+        </div>
+    </header>
+
+    <main class="admin-main">
+        <div class="container">
+            <!-- Admin Login Gate -->
+            <section id="adminLoginSection" class="admin-login-card">
+                <h2>🔒 Staff Login</h2>
+                <p>Log in with your staff account to manage job postings.</p>
+                <form id="adminLoginForm">
+                    <div class="form-group">
+                        <label for="adminEmail">Email</label>
+                        <input type="email" id="adminEmail" name="email" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="adminPassword">Password</label>
+                        <input type="password" id="adminPassword" name="password" required>
+                    </div>
+                    <div id="adminLoginError" class="error-message" style="display: none;"></div>
+                    <button type="submit" class="btn-primary">Login</button>
+                </form>
+            </section>
+
+            <!-- Jobs Management (shown after login) -->
+            <div id="jobsManageSection" style="display: none;">
+                <div class="admin-toolbar">
+                    <a href="admin-post-job.html" class="btn-primary">➕ Post New Job</a>
+                    <button type="button" id="adminLogoutBtn" class="btn-logout">Logout</button>
+                </div>
+
+                <div class="enrollments-table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Category</th>
+                                <th>Status</th>
+                                <th>Applications</th>
+                                <th>Posted</th>
+                                <th>Deadline</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="jobsTableBody"></tbody>
+                    </table>
+                    <div id="jobsEmptyState" class="empty-state" style="display: none;">
+                        No jobs posted yet. <a href="admin-post-job.html">Post the first one →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Applicants Modal -->
+    <div id="applicantsModal" class="auth-modal">
+        <div class="auth-modal-content" style="max-width: 800px;">
+            <div class="auth-modal-header">
+                <h2 id="applicantsModalTitle">Applicants</h2>
+                <span class="close-auth-modal" onclick="closeApplicantsModal()">&times;</span>
+            </div>
+            <div class="auth-modal-body">
+                <div id="applicantsList"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/api-config.js?v=82.0"></script>
+    <script src="scripts/admin-manage-jobs.js?v=84.0"></script>
+</body>
+</html>

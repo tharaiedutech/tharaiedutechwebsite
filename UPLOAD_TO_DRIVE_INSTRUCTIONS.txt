@@ -1,0 +1,98 @@
+═══════════════════════════════════════════════════════════════
+  THARAI EDUTECH - PHASE 2 WEBSITE PACKAGE
+═══════════════════════════════════════════════════════════════
+
+✅ PACKAGE READY FOR TRANSFER!
+
+📦 ZIP File: THARAI_EDUTECH_WEBSITE.zip
+📍 Location: /Users/bnedumaran/Documents/Tharaisite/
+💾 Size: 207 KB
+
+═══════════════════════════════════════════════════════════════
+  WHAT'S INCLUDED:
+═══════════════════════════════════════════════════════════════
+
+✅ 8 HTML Pages:
+   - index.html (Home)
+   - about.html (About Us)
+   - courses.html (Course Catalog - 15 tracks, 129 courses)
+   - course-detail.html (Dynamic Course Details)
+   - trainings.html (Corporate Training)
+   - careers.html (Job Openings)
+   - contact.html (Contact Form)
+   - admin-post-job.html (Admin Job Posting)
+
+✅ Styles Folder (4 CSS files):
+   - main.css (2909 lines)
+   - careers.css
+   - admin.css
+   - course-detail.css
+
+✅ Scripts Folder (6 JavaScript files):
+   - course-detail.js (129 courses data)
+   - enrollment.js
+   - job-posting.js
+   - auth.js
+   - admin-dashboard.js
+   - student-dashboard.js
+
+✅ Images Folder:
+   - tharai-tree-logo.PNG
+
+✅ Database Folder (2 SQL files):
+   - jobs_table_schema.sql
+   - PROPER_DATABASE_SCHEMA.sql
+
+═══════════════════════════════════════════════════════════════
+  UPLOAD TO GOOGLE DRIVE:
+═══════════════════════════════════════════════════════════════
+
+Option 1: Via Browser
+──────────────────────
+1. Open https://drive.google.com
+2. Click "New" → "File upload"
+3. Select: THARAI_EDUTECH_WEBSITE.zip
+4. Wait for upload to complete
+5. Right-click file → "Get link" → "Copy link"
+6. Share the link
+
+Option 2: Via Finder (Mac)
+───────────────────────────
+1. Open Finder
+2. Go to: Documents/Tharaisite/
+3. Find: THARAI_EDUTECH_WEBSITE.zip
+4. Drag and drop to Google Drive folder
+5. Wait for sync
+6. Get shareable link
+
+═══════════════════════════════════════════════════════════════
+  NEXT STEPS (FOR NEW SYSTEM):
+═══════════════════════════════════════════════════════════════
+
+1. Download ZIP from Google Drive
+2. Extract to desired location
+3. Create Supabase account (https://supabase.com)
+4. Update Supabase credentials in 5 JavaScript files
+5. Test locally
+6. Deploy to hosting (Netlify recommended)
+
+═══════════════════════════════════════════════════════════════
+  IMPORTANT NOTES:
+═══════════════════════════════════════════════════════════════
+
+⚠️  Before deploying on new system:
+    - Update Supabase URL and Key in JS files
+    - Update email address (tharaiedutech@gmail.com)
+    - Update phone numbers in contact page
+    - Add your social media links
+
+📚 Documentation files NOT included in ZIP
+   (Available separately if needed)
+
+═══════════════════════════════════════════════════════════════
+
+✅ READY TO UPLOAD TO GOOGLE DRIVE!
+
+File Location: /Users/bnedumaran/Documents/Tharaisite/THARAI_EDUTECH_WEBSITE.zip
+
+═══════════════════════════════════════════════════════════════

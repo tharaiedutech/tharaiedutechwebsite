@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - THARAI EduTech</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/admin.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <a href="index.html" class="logo-link">
+                    <img src="images/logo.png" alt="Tharai Logo" class="logo-img">
+                    <div class="logo-text">
+                        <span class="brand-tharai">THARAI</span>
+                        <span class="brand-edutech">EduTech</span>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-right">
+                <span id="studentUserName" class="admin-user-name"></span>
+                <button class="btn-secondary" onclick="signOut()">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Student Dashboard Container -->
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <ul class="admin-menu">
+                <li class="menu-item active" data-section="overview">
+                    <span class="menu-icon">📊</span>
+                    <span class="menu-text">Overview</span>
+                </li>
+                <li class="menu-item" data-section="courses">
+                    <span class="menu-icon">📚</span>
+                    <span class="menu-text">My Courses</span>
+                </li>
+                <li class="menu-item" data-section="profile">
+                    <span class="menu-icon">👤</span>
+                    <span class="menu-text">Profile</span>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- Overview Section -->
+            <section id="overview-section" class="admin-section active">
+                <div class="section-header">
+                    <h1>🎓 Student Dashboard</h1>
+                </div>
+
+                <!-- Access Status Card -->
+                <div id="accessStatusCard" class="access-status-card"></div>
+
+                <!-- Statistics Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📚</div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="enrolledCoursesCount">-</div>
+                            <div class="stat-label">Enrolled Courses</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📅</div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="daysRemainingCount">-</div>
+                            <div class="stat-label">Days Remaining</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📆</div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="accessEndDateDisplay">-</div>
+                            <div class="stat-label">Access Until</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⏱️</div>
+                        <div class="stat-content">
+                            <div class="stat-value" id="durationDisplay">-</div>
+                            <div class="stat-label">Total Duration</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Welcome Message -->
+                <div class="welcome-section">
+                    <h2>Welcome Back! 👋</h2>
+                    <p id="welcomeMessage">Loading your dashboard...</p>
+                </div>
+
+                <!-- Enrolled Courses Preview -->
+                <div class="dashboard-section">
+                    <h3>📚 Your Enrolled Courses</h3>
+                    <div id="enrolledCoursesList">
+                        <div class="loading-state">
+                            <div class="spinner"></div>
+                            <p>Loading courses...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Courses Section -->
+            <section id="courses-section" class="admin-section">
+                <div class="section-header">
+                    <h1>📚 My Courses</h1>
+                </div>
+                <p>Full course catalog coming soon...</p>
+            </section>
+
+            <!-- Profile Section -->
+            <section id="profile-section" class="admin-section">
+                <div class="section-header">
+                    <h1>👤 My Profile</h1>
+                </div>
+                <div id="profileContent">
+                    <div class="loading-state">
+                        <div class="spinner"></div>
+                        <p>Loading profile...</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="scripts/api-config.js?v=82.0"></script>
+    <script src="scripts/auth.js?v=82.0"></script>
+    <script src="scripts/student-dashboard.js?v=82.0"></script>
+</body>
+</html>

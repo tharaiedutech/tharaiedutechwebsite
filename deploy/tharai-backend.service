@@ -1,0 +1,21 @@
+[Unit]
+Description=THARAI EduTech Flask backend (gunicorn)
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/tharaisite/backend
+EnvironmentFile=/var/www/tharaisite/backend/.env
+ExecStart=/var/www/tharaisite/backend/venv/bin/gunicorn \
+    --workers 3 \
+    --bind 127.0.0.1:5001 \
+    --access-logfile /var/log/tharai/access.log \
+    --error-logfile /var/log/tharai/error.log \
+    app:app
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

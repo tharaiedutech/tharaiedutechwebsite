@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Course Detail</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test { margin: 20px 0; padding: 10px; background: #f0f0f0; }
+    </style>
+</head>
+<body>
+    <h1>Course Detail Test Page</h1>
+    
+    <div class="test">
+        <h2>JavaScript Test:</h2>
+        <p id="js-test">JavaScript NOT loaded</p>
+    </div>
+    
+    <div class="test">
+        <h2>Course ID:</h2>
+        <p id="course-id-test">Not detected</p>
+    </div>
+    
+    <div class="test">
+        <h2>Course Data:</h2>
+        <pre id="course-data-test">No data</pre>
+    </div>
+    
+    <div class="test">
+        <h2>Course Title Should Be:</h2>
+        <h1 id="course-title">Loading...</h1>
+    </div>
+
+    <script>
+        // Test script
+        document.getElementById('js-test').textContent = 'JavaScript IS loaded! ✓';
+        
+        // Get course ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const courseId = urlParams.get('course');
+        document.getElementById('course-id-test').textContent = courseId || 'No course ID in URL';
+        
+        // Load the actual course-detail.js to test
+        const script = document.createElement('script');
+        script.src = 'scripts/course-detail.js?v=' + Date.now();
+        script.onload = function() {
+            document.getElementById('course-data-test').textContent = 
+                'course-detail.js loaded!\nCourse exists: ' + (courseData && courseData[courseId] ? 'YES' : 'NO');
+            
+            if (courseData && courseData[courseId]) {
+                document.getElementById('course-data-test').textContent += 
+                    '\nCourse Title: ' + courseData[courseId].title;
+            }
+        };
+        script.onerror = function() {
+            document.getElementById('course-data-test').textContent = 'ERROR loading course-detail.js';
+        };
+        document.head.appendChild(script);
+    </script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!-- Account Creation Modal -->
+<div id="accountCreationModal" class="auth-modal">
+    <div class="auth-modal-content" style="max-width: 700px;">
+        <div class="auth-modal-header">
+            <h2>👤 Create Student Account</h2>
+            <span class="close-auth-modal" onclick="closeAccountCreationModal()">&times;</span>
+        </div>
+        <div class="auth-modal-body">
+            <!-- Student Info Display (Read-only) -->
+            <div class="account-student-info">
+                <h3>📋 Enrollment Details</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Student Name:</label>
+                        <span id="accountStudentName"></span>
+                    </div>
+                    <div class="info-item">
+                        <label>Personal Email:</label>
+                        <span id="accountStudentEmail"></span>
+                    </div>
+                    <div class="info-item">
+                        <label>Phone:</label>
+                        <span id="accountStudentPhone"></span>
+                    </div>
+                    <div class="info-item">
+                        <label>Course:</label>
+                        <span id="accountCourseName"></span>
+                    </div>
+                    <div class="info-item">
+                        <label>Track:</label>
+                        <span id="accountTrackName"></span>
+                    </div>
+                    <div class="info-item">
+                        <label>Preferred Schedule:</label>
+                        <span id="accountSchedule"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Account Creation Form -->
+            <form id="accountCreationForm">
+                <input type="hidden" id="enrollmentIdHidden">
+                <input type="hidden" id="personalEmailHidden">
+                <input type="hidden" id="studentNameHidden">
+                <input type="hidden" id="studentPhoneHidden">
+
+                <p style="margin-top: 1.5rem; padding: 1rem; background: #F3F4F6; border-radius: 8px; color: #6B7280; font-size: 0.9rem;">
+                    🔐 A login email (e.g. <code>student001@tharai.com</code>) and password will be generated automatically once you submit this form, and emailed to the student's personal address above.
+                </p>
+
+                <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; color: #7C3AED;">📅 Access Period</h3>
+
+                <div class="form-group">
+                    <label for="accessDuration">Access Duration <span class="required">*</span></label>
+                    <select id="accessDuration" required onchange="calculateEndDate()">
+                        <option value="">-- Select Duration --</option>
+                        <option value="3">3 Months</option>
+                        <option value="6">6 Months</option>
+                        <option value="12">12 Months</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="accessStartDate">Start Date <span class="required">*</span></label>
+                        <input type="date" id="accessStartDate" required onchange="calculateEndDate()">
+                    </div>
+                    <div class="form-group">
+                        <label for="accessEndDate">End Date (Auto-calculated)</label>
+                        <input type="date" id="accessEndDate" readonly style="background: #F3F4F6;">
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; color: #7C3AED;">💰 Payment Details</h3>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="paymentAmount">Payment Amount (₹) <span class="required">*</span></label>
+                        <input type="number" id="paymentAmount" required placeholder="50000" min="0" step="100">
+                    </div>
+                    <div class="form-group">
+                        <label for="paymentStatus">Payment Status <span class="required">*</span></label>
+                        <select id="paymentStatus" required>
+                            <option value="">-- Select Status --</option>
+                            <option value="pending">Pending</option>
+                            <option value="partial">Partial</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-actions" style="margin-top: 2rem;">
+                    <button type="submit" class="btn-auth-primary">
+                        ✅ Create Account & Send Credentials
+                    </button>
+                    <button type="button" class="btn-secondary-modal" onclick="closeAccountCreationModal()">
+                        Cancel
+                    </button>
+                </div>
+
+                <div id="accountCreationError" class="error-message" style="display: none; margin-top: 1rem;"></div>
+                <div id="accountCreationSuccess" class="success-message" style="display: none; margin-top: 1rem;"></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Account Creation Modal Styles */
+.account-student-info {
+    background: linear-gradient(135deg, #F3E8FF 0%, #FCE7F3 100%);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.account-student-info h3 {
+    color: #7C3AED;
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.info-item label {
+    font-size: 0.875rem;
+    color: #6B7280;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-item span {
+    color: #1F2937;
+    font-weight: 500;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.btn-secondary-small {
+    padding: 0.5rem 1rem;
+    background: #F3F4F6;
+    border: 2px solid #E5E7EB;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.btn-secondary-small:hover {
+    background: #E5E7EB;
+    border-color: #7C3AED;
+    color: #7C3AED;
+}
+
+@media (max-width: 768px) {
+    .info-grid,
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+</style>

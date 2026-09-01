@@ -1,0 +1,57 @@
+databases:
+  - name: tharai-db
+    databaseName: tharai
+    user: tharai
+    plan: free
+
+services:
+  - type: web
+    name: tharai-edutech
+    env: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    preDeployCommand: python init_db.py
+    startCommand: gunicorn --bind 0.0.0.0:$PORT app:app
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: FLASK_ENV
+        value: production
+      # Update this to the real onrender.com URL Render assigns after first
+      # deploy (only matters if something other than this same service ever
+      # calls the API cross-origin — the frontend itself is same-origin).
+      - key: FRONTEND_ORIGIN
+        value: https://tharai-edutech.onrender.com
+      - key: DB_NAME
+        fromDatabase:
+          name: tharai-db
+          property: database
+      - key: DB_USER
+        fromDatabase:
+          name: tharai-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: tharai-db
+          property: password
+      - key: DB_HOST
+        fromDatabase:
+          name: tharai-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: tharai-db
+          property: port
+      - key: SMTP_HOST
+        value: smtp.gmail.com
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASSWORD
+        sync: false
+      - key: FROM_EMAIL
+        value: tharaiedutech@gmail.com
+      - key: ANTHROPIC_API_KEY
+        sync: false

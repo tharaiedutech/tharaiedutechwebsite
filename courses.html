@@ -1,0 +1,2733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- Last Updated: 2026-06-29 v6.0 - CTA moved to top, Enroll button fixed, Hover overlay fixed -->
+    <title>Our Courses - THARAI EduTech</title>
+    <link rel="stylesheet" href="styles/main.css?v=92.0">
+    <link rel="stylesheet" href="styles/courses.css?v=78.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CRITICAL FIX: Inline CSS to force enrollment modal text to be visible -->
+    <style>
+        #courseEnrollmentModal select,
+        #courseEnrollmentModal select option,
+        #courseEnrollmentModal textarea,
+        #courseEnrollmentModal label,
+        #courseEnrollmentModal .checkbox-label span {
+            color: #000000 !important;
+            font-weight: 600 !important;
+            opacity: 1 !important;
+        }
+
+        #courseEnrollmentModal select {
+            background-color: #FFFFFF !important;
+        }
+
+        #courseEnrollmentModal select option {
+            background-color: #FFFFFF !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Social Media Sidebar -->
+    <div class="social-sidebar">
+        <a href="https://wa.me/919363730040" target="_blank" class="social-link whatsapp" title="WhatsApp Us">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/tharaiedutech/" target="_blank" class="social-link instagram" title="Follow us on Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/people/Tharai-EduTech/pfbid02ucPdUBFHrg16LynUDJjy1XSFQkW9TpPNJ4d8GkVRiFQ1iAJg2HZCFP2yvsQ9uEUkl/" target="_blank" class="social-link facebook" title="Like us on Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/143542995/" target="_blank" class="social-link linkedin" title="Connect on LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/channel/UCvMZUK_UoR0cb4aFhccsuqg" target="_blank" class="social-link youtube" title="Subscribe on YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="https://x.com/tharaiedutech" target="_blank" class="social-link twitter-x" title="Follow us on X (Twitter)">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="mailto:info@tharai.edu" class="social-link email" title="Email Us">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/tharai-tree-logo.png" alt="THARAI Logo" class="logo-img">
+                    <div class="logo-text">
+                        <h1><a href="index.html" style="text-decoration: none; color: inherit;">THAR<span class="ai-highlight">AI</span></a></h1>
+                        <span class="tagline">EduTech</span>
+                    </div>
+                </div>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li class="has-mega-menu">
+                            <a href="courses.html" class="active">Courses <span class="dropdown-arrow">▼</span></a>
+                            <!-- Mega Menu - All Tracks Grid -->
+                            <div class="mega-menu">
+                                <div class="mega-menu-tracks">
+                                    <a href="courses.html#ai-ml" class="track-menu-item">
+                                        <span class="track-icon">🤖</span>
+                                        <span class="track-title">AI & Machine Learning</span>
+                                    </a>
+                                    <a href="courses.html#data-science" class="track-menu-item">
+                                        <span class="track-icon">📈</span>
+                                        <span class="track-title">Data Science & ML</span>
+                                    </a>
+                                    <a href="courses.html#analytics-bi" class="track-menu-item">
+                                        <span class="track-icon">📊</span>
+                                        <span class="track-title">Data Analytics & BI</span>
+                                    </a>
+                                    <a href="courses.html#data-engineering" class="track-menu-item">
+                                        <span class="track-icon">💾</span>
+                                        <span class="track-title">Data Engineering</span>
+                                    </a>
+                                    <a href="courses.html#cloud-devops" class="track-menu-item">
+                                        <span class="track-icon">☁️</span>
+                                        <span class="track-title">Cloud & DevOps</span>
+                                    </a>
+                                    <a href="courses.html#fullstack" class="track-menu-item">
+                                        <span class="track-icon">🌐</span>
+                                        <span class="track-title">Full Stack Development</span>
+                                    </a>
+                                    <a href="courses.html#salesforce" class="track-menu-item">
+                                        <span class="track-icon">💼</span>
+                                        <span class="track-title">Salesforce</span>
+                                    </a>
+                                    <a href="courses.html#automation" class="track-menu-item">
+                                        <span class="track-icon">⚙️</span>
+                                        <span class="track-title">Automation & RPA</span>
+                                    </a>
+                                    <a href="courses.html#programming" class="track-menu-item">
+                                        <span class="track-icon">💻</span>
+                                        <span class="track-title">Programming</span>
+                                    </a>
+                                    <a href="courses.html#mobile" class="track-menu-item">
+                                        <span class="track-icon">📱</span>
+                                        <span class="track-title">Mobile App Development</span>
+                                    </a>
+                                    <a href="courses.html#security" class="track-menu-item">
+                                        <span class="track-icon">🔒</span>
+                                        <span class="track-title">Cybersecurity</span>
+                                    </a>
+                                    <a href="courses.html#design" class="track-menu-item">
+                                        <span class="track-icon">🎨</span>
+                                        <span class="track-title">UI/UX Design</span>
+                                    </a>
+                                    <a href="courses.html#dsa" class="track-menu-item">
+                                        <span class="track-icon">🔢</span>
+                                        <span class="track-title">Data Structures & Algorithms</span>
+                                    </a>
+                                    <a href="courses.html#ai-nocode" class="track-menu-item">
+                                        <span class="track-icon">🤖</span>
+                                        <span class="track-title">AI Tools (No-Code)</span>
+                                    </a>
+                                    <a href="courses.html#databases" class="track-menu-item">
+                                        <span class="track-icon">💾</span>
+                                        <span class="track-title">Databases & Data Management</span>
+                                    </a>
+                                    <a href="courses.html#quantum" class="track-menu-item">
+                                        <span class="track-icon">⚛️</span>
+                                        <span class="track-title">Quantum Computing</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="trainings.html">Trainings</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn-primary" id="loginBtn">Login</button>
+                    <button class="btn-primary" id="dashboardBtn" style="display:none;">Dashboard</button>
+                    <button class="btn-secondary" id="logoutBtn" style="display:none;">Logout</button>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Floating Home Button -->
+    <a href="index.html" class="home-button" title="Go to Home">
+        <span class="home-icon">🏠</span>
+    </a>
+
+    <!-- Auth Modals Placeholder -->
+    <div id="authModalsPlaceholder"></div>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">Explore Our Courses</h1>
+            <p class="page-subtitle">Industry-leading programs designed to transform your career</p>
+        </div>
+    </section>
+
+    <!-- Custom Training Banner (Horizontal above search) -->
+    <section class="custom-training-banner">
+        <div class="container">
+            <div class="training-banner-content">
+                <div class="banner-icon">💡</div>
+                <div class="banner-text">
+                    <strong>Can't Find What You're Looking For?</strong>
+                    <span>We offer custom training programs tailored to your needs</span>
+                </div>
+                <div class="banner-actions">
+                    <button class="banner-btn primary" onclick="window.location.href='contact.html'">Request Custom Course</button>
+                    <button class="banner-btn secondary" onclick="window.location.href='index.html#contact'">Talk to Our Team</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <section class="search-filter-section">
+        <div class="container">
+            <div class="search-filter-bar">
+                <div class="search-box">
+                    <input type="text" id="courseSearch" placeholder="Search courses..." autocomplete="off" />
+                    <div id="searchSuggestions" class="search-suggestions"></div>
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="filter-dropdown">
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="ai-ml">Track 1: AI & Machine Learning</option>
+                        <option value="data-science">Track 2: Data Science & ML</option>
+                        <option value="analytics-bi">Track 3: Data Analytics & BI</option>
+                        <option value="data-engineering">Track 4: Data Engineering</option>
+                        <option value="fullstack">Track 5: Full Stack Development</option>
+                        <option value="programming">Track 6: Programming</option>
+                        <option value="design">Track 7: UI/UX Design</option>
+                        <option value="cloud-devops">Track 8: Cloud & DevOps</option>
+                        <option value="salesforce">Track 9: Salesforce</option>
+                        <option value="automation">Track 10: Automation & RPA</option>
+                        <option value="mobile">Track 11: Mobile App Development</option>
+                        <option value="security">Track 12: Cybersecurity</option>
+                        <option value="dsa">Track 13: Data Structures & Algorithms</option>
+                        <option value="ai-nocode">Track 14: AI Tools for Non-Technical</option>
+                        <option value="databases">Track 15: Databases & Data Management</option>
+                        <option value="quantum">Track 16: Quantum Computing</option>
+                    </select>
+                </div>
+                <div class="filter-dropdown">
+                    <select id="levelFilter">
+                        <option value="all">All Levels</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+                <div class="filter-dropdown">
+                    <select id="modeFilter">
+                        <option value="all">All Modes</option>
+                        <option value="online">Online</option>
+                        <option value="offline">Offline</option>
+                        <option value="hybrid">Hybrid</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content with Sidebar -->
+    <div class="courses-main-layout">
+        <div class="container">
+            <div class="layout-wrapper">
+                <!-- Left Sidebar - Track Navigation -->
+                <aside class="track-sidebar">
+                    <nav class="track-nav">
+                        <!-- First set of tracks -->
+                        <a href="#ai-ml" class="track-nav-link" data-category="ai-ml">
+                            <span class="track-icon">🤖</span>
+                            <span class="track-name">AI & Machine Learning</span>
+                        </a>
+                        <a href="#data-science" class="track-nav-link" data-category="data-science">
+                            <span class="track-icon">📈</span>
+                            <span class="track-name">Data Science & ML</span>
+                        </a>
+                        <a href="#analytics-bi" class="track-nav-link" data-category="analytics-bi">
+                            <span class="track-icon">📊</span>
+                            <span class="track-name">Data Analytics & BI</span>
+                        </a>
+                        <a href="#data-engineering" class="track-nav-link" data-category="data-engineering">
+                            <span class="track-icon">💾</span>
+                            <span class="track-name">Data Engineering</span>
+                        </a>
+                        <a href="#fullstack" class="track-nav-link" data-category="fullstack">
+                            <span class="track-icon">🌐</span>
+                            <span class="track-name">Full Stack Development</span>
+                        </a>
+                        <a href="#programming" class="track-nav-link" data-category="programming">
+                            <span class="track-icon">💻</span>
+                            <span class="track-name">Programming</span>
+                        </a>
+                        <a href="#design" class="track-nav-link" data-category="design">
+                            <span class="track-icon">🎨</span>
+                            <span class="track-name">UI/UX Design</span>
+                        </a>
+                        <a href="#cloud-devops" class="track-nav-link" data-category="cloud-devops">
+                            <span class="track-icon">☁️</span>
+                            <span class="track-name">Cloud & DevOps</span>
+                        </a>
+                        <a href="#salesforce" class="track-nav-link" data-category="salesforce">
+                            <span class="track-icon">💼</span>
+                            <span class="track-name">Salesforce</span>
+                        </a>
+                        <a href="#automation" class="track-nav-link" data-category="automation">
+                            <span class="track-icon">⚙️</span>
+                            <span class="track-name">Automation & RPA</span>
+                        </a>
+                        <a href="#mobile" class="track-nav-link" data-category="mobile">
+                            <span class="track-icon">📱</span>
+                            <span class="track-name">Mobile App Development</span>
+                        </a>
+                        <a href="#security" class="track-nav-link" data-category="security">
+                            <span class="track-icon">🔒</span>
+                            <span class="track-name">Cybersecurity</span>
+                        </a>
+                        <a href="#dsa" class="track-nav-link" data-category="dsa">
+                            <span class="track-icon">🔢</span>
+                            <span class="track-name">Data Structures</span>
+                        </a>
+                        <a href="#ai-nocode" class="track-nav-link" data-category="ai-nocode">
+                            <span class="track-icon">🤖</span>
+                            <span class="track-name">AI Tools (No-Code)</span>
+                        </a>
+                        <a href="#databases" class="track-nav-link" data-category="databases">
+                            <span class="track-icon">💾</span>
+                            <span class="track-name">Databases</span>
+                        </a>
+                        <a href="#quantum" class="track-nav-link" data-category="quantum">
+                            <span class="track-icon">⚛️</span>
+                            <span class="track-name">Quantum Computing</span>
+                        </a>
+                        <!-- Duplicate set for seamless infinite scroll -->
+                        <a href="#ai-ml" class="track-nav-link" data-category="ai-ml">
+                            <span class="track-icon">🤖</span>
+                            <span class="track-name">AI & Machine Learning</span>
+                        </a>
+                        <a href="#data-science" class="track-nav-link" data-category="data-science">
+                            <span class="track-icon">📈</span>
+                            <span class="track-name">Data Science & ML</span>
+                        </a>
+                        <a href="#analytics-bi" class="track-nav-link" data-category="analytics-bi">
+                            <span class="track-icon">📊</span>
+                            <span class="track-name">Data Analytics & BI</span>
+                        </a>
+                        <a href="#data-engineering" class="track-nav-link" data-category="data-engineering">
+                            <span class="track-icon">💾</span>
+                            <span class="track-name">Data Engineering</span>
+                        </a>
+                        <a href="#fullstack" class="track-nav-link" data-category="fullstack">
+                            <span class="track-icon">🌐</span>
+                            <span class="track-name">Full Stack Development</span>
+                        </a>
+                        <a href="#programming" class="track-nav-link" data-category="programming">
+                            <span class="track-icon">💻</span>
+                            <span class="track-name">Programming</span>
+                        </a>
+                        <a href="#design" class="track-nav-link" data-category="design">
+                            <span class="track-icon">🎨</span>
+                            <span class="track-name">UI/UX Design</span>
+                        </a>
+                        <a href="#cloud-devops" class="track-nav-link" data-category="cloud-devops">
+                            <span class="track-icon">☁️</span>
+                            <span class="track-name">Cloud & DevOps</span>
+                        </a>
+                        <a href="#salesforce" class="track-nav-link" data-category="salesforce">
+                            <span class="track-icon">💼</span>
+                            <span class="track-name">Salesforce</span>
+                        </a>
+                        <a href="#automation" class="track-nav-link" data-category="automation">
+                            <span class="track-icon">⚙️</span>
+                            <span class="track-name">Automation & RPA</span>
+                        </a>
+                        <a href="#mobile" class="track-nav-link" data-category="mobile">
+                            <span class="track-icon">📱</span>
+                            <span class="track-name">Mobile App Development</span>
+                        </a>
+                        <a href="#security" class="track-nav-link" data-category="security">
+                            <span class="track-icon">🔒</span>
+                            <span class="track-name">Cybersecurity</span>
+                        </a>
+                        <a href="#dsa" class="track-nav-link" data-category="dsa">
+                            <span class="track-icon">🔢</span>
+                            <span class="track-name">Data Structures</span>
+                        </a>
+                        <a href="#ai-nocode" class="track-nav-link" data-category="ai-nocode">
+                            <span class="track-icon">🤖</span>
+                            <span class="track-name">AI Tools (No-Code)</span>
+                        </a>
+                        <a href="#databases" class="track-nav-link" data-category="databases">
+                            <span class="track-icon">💾</span>
+                            <span class="track-name">Databases</span>
+                        </a>
+                        <a href="#quantum" class="track-nav-link" data-category="quantum">
+                            <span class="track-icon">⚛️</span>
+                            <span class="track-name">Quantum Computing</span>
+                        </a>
+                    </nav>
+                </aside>
+
+                <!-- Right Content Area - Courses -->
+                <div class="courses-content">
+    <!-- Courses by Track -->
+    <main class="courses-main">
+        <div class="container">
+
+            <!-- TRACK 1: AI & MACHINE LEARNING -->
+            <section id="ai-ml" class="course-category" data-category="ai-ml">
+                <div class="category-header">
+                    <div class="category-icon">🤖</div>
+                    <div>
+                        <h2 class="category-title">Track 1: AI & Machine Learning</h2>
+                        <p class="category-description">Build AI systems, master GenAI, LLMs, and Deep Learning • 12 Courses</p>
+                    </div>
+                </div>
+
+                <div class="courses-grid">
+                    <!-- Course 1 -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <div class="course-badge hot">Hot 2026</div>
+                        <h3>Generative AI & Large Language Models</h3>
+                        <p class="course-brief">Master GPT, Claude, Gemini and build AI-powered applications with state-of-the-art LLMs</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 14 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=gen-ai-llm" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=gen-ai-llm" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 2 -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <div class="course-badge new">Brand New</div>
+                        <h3>Model Context Protocol (MCP)</h3>
+                        <p class="course-brief">Build MCP servers and clients for advanced AI context management in modern systems</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=mcp" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=mcp" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 3 -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <div class="course-badge popular">Popular</div>
+                        <h3>Prompt Engineering & AI Integration</h3>
+                        <p class="course-brief">Master advanced prompting techniques and seamlessly integrate AI into workflows</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 6 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=prompt-engineering" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=prompt-engineering" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 4 -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <div class="course-badge hot">Hot</div>
+                        <h3>Agentic AI Development</h3>
+                        <p class="course-brief">Build autonomous AI agents with LangChain, AutoGPT, and modern agent frameworks</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=agentic-ai" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=agentic-ai" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 5 -->
+                    <div class="course-card" data-level="advanced" data-mode="hybrid">
+                        <div class="course-badge new">New</div>
+                        <h3>Fine-tuning LLMs & RAG Systems</h3>
+                        <p class="course-brief">Advanced LLM customization and Retrieval Augmented Generation implementation</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=llm-rag" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=llm-rag" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 6 -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <h3>Machine Learning Fundamentals</h3>
+                        <p class="course-brief">Master core ML algorithms with Scikit-learn, regression, classification, clustering</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 12 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=ml-fundamentals" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=ml-fundamentals" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 7 -->
+                    <div class="course-card" data-level="advanced" data-mode="hybrid">
+                        <div class="course-badge popular">Popular</div>
+                        <h3>Deep Learning & Neural Networks</h3>
+                        <p class="course-brief">CNNs, RNNs, Transformers, and modern deep learning architectures with TensorFlow/PyTorch</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 14 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=deep-learning" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=deep-learning" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 8 -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <h3>Computer Vision</h3>
+                        <p class="course-brief">Image processing, object detection, image segmentation with OpenCV and Deep Learning</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 12 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=computer-vision" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=computer-vision" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 9 -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Natural Language Processing</h3>
+                        <p class="course-brief">Text processing, sentiment analysis, NER, and transformer-based NLP models</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 12 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=nlp" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=nlp" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 10 -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <h3>Reinforcement Learning</h3>
+                        <p class="course-brief">Learn RL algorithms, Q-learning, policy gradients, and build intelligent agents</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=reinforcement-learning" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=reinforcement-learning" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 11 -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <h3>MLOps & AI Deployment</h3>
+                        <p class="course-brief">Production ML, model monitoring, CI/CD pipelines, and deployment best practices</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=mlops" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=mlops" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 12 -->
+                    <div class="course-card" data-level="advanced" data-mode="hybrid">
+                        <div class="course-badge new">New</div>
+                        <h3>Vector Databases & AI Infrastructure</h3>
+                        <p class="course-brief">Master Pinecone, Weaviate, Chroma for AI-powered search and RAG systems</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=vector-databases" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=vector-databases" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<!-- TRACK 2: DATA SCIENCE & ML -->
+            <section id="data-science" class="course-category" data-category="data-science">
+                <div class="category-header">
+                    <div class="category-icon">📈</div>
+                    <div>
+                        <h2 class="category-title">Track 2: Data Science & ML</h2>
+                        <p class="category-description">Master statistical analysis, machine learning algorithms, and data visualization • 8 Courses</p>
+                    </div>
+                </div>
+
+                <div class="courses-grid">
+                    <!-- Data Science with Python -->
+                    <div class="course-card" data-level="beginner" data-mode="hybrid">
+                        <div class="course-badge popular">Popular</div>
+                        <h3>Data Science with Python</h3>
+                        <p class="course-brief">Complete data science journey with Python, Pandas, NumPy, and Scikit-learn</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 12 Weeks</span>
+                            <span class="level">📊 Beginner</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=data-science-python" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=data-science-python" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Machine Learning Fundamentals -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <div class="course-badge hot">Hot</div>
+                        <h3>Machine Learning Fundamentals</h3>
+                        <p class="course-brief">Comprehensive ML algorithms and techniques with Scikit-learn</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 14 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=ml-fundamentals" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=ml-fundamentals" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Statistical Analysis -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Statistical Analysis & A/B Testing</h3>
+                        <p class="course-brief">Hypothesis testing, statistical inference, and experimental design</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=statistical-analysis" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=statistical-analysis" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Data Visualization -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <h3>Data Visualization Mastery</h3>
+                        <p class="course-brief">Create compelling visualizations with Matplotlib, Seaborn, and Plotly</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=data-visualization" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=data-visualization" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Deep Learning -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <div class="course-badge new">New</div>
+                        <h3>Deep Learning & Neural Networks</h3>
+                        <p class="course-brief">CNNs, RNNs, and Transformers with TensorFlow and PyTorch</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 16 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=deep-learning" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=deep-learning" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Computer Vision & NLP -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <h3>Computer Vision & NLP Basics</h3>
+                        <p class="course-brief">Image processing and text analysis fundamentals</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 12 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=cv-nlp-basics" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=cv-nlp-basics" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- MLOps -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <h3>MLOps & Model Deployment</h3>
+                        <p class="course-brief">Production ML, model monitoring, and CI/CD for ML systems</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=mlops" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=mlops" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Time Series Analysis -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Time Series Analysis & Forecasting</h3>
+                        <p class="course-brief">ARIMA, Prophet, and modern forecasting techniques</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=time-series" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=time-series" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<!-- TRACK 3: DATA ANALYTICS & BI -->
+            <section id="analytics-bi" class="course-category" data-category="analytics-bi">
+                <div class="category-header">
+                    <div class="category-icon">📊</div>
+                    <div>
+                        <h2 class="category-title">Track 3: Data Analytics & Business Intelligence</h2>
+                        <p class="category-description">Transform data into actionable business insights • 6 Courses</p>
+                    </div>
+                </div>
+
+                <div class="courses-grid">
+                    <!-- Power BI -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <div class="course-badge popular">Popular</div>
+                        <h3>Power BI Complete</h3>
+                        <p class="course-brief">Master data visualization and business intelligence with Power BI</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=power-bi" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=power-bi" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Tableau -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <div class="course-badge hot">Hot</div>
+                        <h3>Tableau Complete</h3>
+                        <p class="course-brief">Advanced data visualization and dashboard creation with Tableau</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=tableau" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=tableau" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Excel Advanced -->
+                    <div class="course-card" data-level="beginner" data-mode="hybrid">
+                        <h3>Excel Advanced Analytics</h3>
+                        <p class="course-brief">Power Query, Power Pivot, advanced formulas, and business modeling</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Beginner</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=excel-advanced" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=excel-advanced" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Data Storytelling -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Data Storytelling & Communication</h3>
+                        <p class="course-brief">Present data insights effectively to stakeholders and decision-makers</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 6 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=data-storytelling" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=data-storytelling" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- SQL for Analytics -->
+                    <div class="course-card" data-level="beginner" data-mode="hybrid">
+                        <h3>SQL for Data Analytics</h3>
+                        <p class="course-brief">Advanced SQL queries, window functions, and performance optimization</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Beginner</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=sql-analytics" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=sql-analytics" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Looker Studio -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <div class="course-badge new">New</div>
+                        <h3>Google Looker Studio</h3>
+                        <p class="course-brief">Create interactive dashboards with Google's BI platform</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 6 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=looker-studio" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=looker-studio" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<!-- TRACK 4: DATA ENGINEERING -->
+            <section id="data-engineering" class="course-category" data-category="data-engineering">
+                <div class="category-header">
+                    <div class="category-icon">💾</div>
+                    <div>
+                        <h2 class="category-title">Track 4: Data Engineering</h2>
+                        <p class="category-description">Build robust data pipelines and infrastructure • 9 Courses</p>
+                    </div>
+                </div>
+
+                <div class="courses-grid">
+                    <!-- Hadoop & Big Data -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <div class="course-badge popular">Popular</div>
+                        <h3>Hadoop & Big Data Ecosystem</h3>
+                        <p class="course-brief">Master Hadoop, HDFS, MapReduce, Hive, HBase for large-scale data processing</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 12 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=hadoop-bigdata" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=hadoop-bigdata" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Apache Kafka -->
+                    <div class="course-card" data-level="advanced" data-mode="hybrid">
+                        <div class="course-badge popular">Popular</div>
+                        <h3>Apache Kafka & Streaming</h3>
+                        <p class="course-brief">Real-time data streaming and event-driven architectures</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=kafka-streaming" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=kafka-streaming" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Apache Spark -->
+                    <div class="course-card" data-level="advanced" data-mode="hybrid">
+                        <div class="course-badge hot">Hot</div>
+                        <h3>Apache Spark & PySpark</h3>
+                        <p class="course-brief">Big data processing with Spark, PySpark, and distributed computing</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 12 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=spark-pyspark" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=spark-pyspark" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Pentaho ETL -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <h3>Pentaho Data Integration (ETL)</h3>
+                        <p class="course-brief">ETL processes and data transformation with Pentaho/Kettle</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=pentaho-etl" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=pentaho-etl" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Snowflake & dbt -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <div class="course-badge new">New</div>
+                        <h3>Snowflake & dbt</h3>
+                        <p class="course-brief">Cloud data warehouse and modern data transformation</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=snowflake-dbt" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=snowflake-dbt" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Airflow -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <h3>Apache Airflow</h3>
+                        <p class="course-brief">Workflow orchestration and data pipeline automation</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=airflow" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=airflow" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+
+                    <!-- Data Warehousing -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <h3>Data Warehousing Fundamentals</h3>
+                        <p class="course-brief">Dimensional modeling, star schema, and data warehouse design</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=data-warehousing" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=data-warehousing" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Data Quality -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Data Quality & Governance</h3>
+                        <p class="course-brief">Data validation, cleansing, and governance frameworks</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=data-quality" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=data-quality" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Real-time Pipelines -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <h3>Real-time Data Pipelines</h3>
+                        <p class="course-brief">Build real-time ETL pipelines with modern tools</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=realtime-pipelines" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=realtime-pipelines" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<!-- TRACK 5: FULL STACK DEVELOPMENT -->
+            <section id="fullstack" class="course-category" data-category="fullstack">
+                <div class="category-header">
+                    <div class="category-icon">🌐</div>
+                    <div>
+                        <h2 class="category-title">Track 5: Full Stack Development</h2>
+                        <p class="category-description">Build modern web applications from frontend to backend • 10 Courses</p>
+                    </div>
+                </div>
+
+                <div class="courses-grid">
+                    <!-- MERN Stack -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <div class="course-badge popular">Popular</div>
+                        <h3>MERN Stack Development</h3>
+                        <p class="course-brief">MongoDB, Express, React, Node.js complete stack</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 16 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=mern-stack" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=mern-stack" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Java Full Stack -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <div class="course-badge hot">Hot</div>
+                        <h3>Java Full Stack</h3>
+                        <p class="course-brief">Spring Boot, React, and microservices architecture</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 16 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=java-fullstack" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=java-fullstack" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Python Fullstack -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <h3>Python Fullstack</h3>
+                        <p class="course-brief">Django/FastAPI backend with React frontend</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 14 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=python-fullstack" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=python-fullstack" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- .NET Stack -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>.NET Full Stack</h3>
+                        <p class="course-brief">ASP.NET Core, C#, and modern frontend frameworks</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 14 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=dotnet-fullstack" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=dotnet-fullstack" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- React & Next.js -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <div class="course-badge new">New</div>
+                        <h3>React 19 & Next.js 15</h3>
+                        <p class="course-brief">Latest React ecosystem with server components</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 14 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=react-nextjs" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=react-nextjs" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Node.js & Express -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <h3>Node.js & Express Complete</h3>
+                        <p class="course-brief">Backend development with JavaScript and Express</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 12 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=nodejs-express" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=nodejs-express" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Modern JavaScript -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Modern JavaScript & TypeScript</h3>
+                        <p class="course-brief">ES6+, TypeScript, and advanced JavaScript concepts</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=javascript-typescript" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=javascript-typescript" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- RESTful APIs -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>RESTful APIs & GraphQL</h3>
+                        <p class="course-brief">API design, development, and best practices</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=apis-graphql" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=apis-graphql" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Database Design -->
+                    <div class="course-card" data-level="beginner" data-mode="hybrid">
+                        <h3>Database Design & SQL</h3>
+                        <p class="course-brief">Relational database design, SQL, and optimization</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Beginner</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=database-sql" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=database-sql" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Real-time Apps -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <h3>Real-time Apps & WebSockets</h3>
+                        <p class="course-brief">Build real-time communication applications</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=realtime-websockets" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=realtime-websockets" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<!-- TRACK 6: PROGRAMMING FUNDAMENTALS -->
+            <section id="programming" class="course-category" data-category="programming">
+                <div class="category-header">
+                    <div class="category-icon">💻</div>
+                    <div>
+                        <h2 class="category-title">Track 6: Programming Fundamentals</h2>
+                        <p class="category-description">Core programming languages and software engineering principles • 8 Courses</p>
+                    </div>
+                </div>
+
+                <div class="courses-grid">
+                    <!-- Python -->
+                    <div class="course-card" data-level="beginner" data-mode="hybrid">
+                        <div class="course-badge popular">Popular</div>
+                        <h3>Python Programming (Beginner to Advanced)</h3>
+                        <p class="course-brief">Complete Python from fundamentals to advanced topics</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 14 Weeks</span>
+                            <span class="level">📊 Beginner</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=python-complete" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=python-complete" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Java -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <div class="course-badge hot">Hot</div>
+                        <h3>Java Programming & Spring Boot</h3>
+                        <p class="course-brief">Enterprise Java and Spring framework</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 14 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=java-spring" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=java-spring" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- C/C++ -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>C/C++ System Programming</h3>
+                        <p class="course-brief">Low-level programming and system development</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 12 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=c-cpp" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=c-cpp" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- JavaScript & TypeScript -->
+                    <div class="course-card" data-level="beginner" data-mode="online">
+                        <h3>JavaScript & TypeScript Complete</h3>
+                        <p class="course-brief">Modern web programming languages</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 12 Weeks</span>
+                            <span class="level">📊 Beginner</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=js-ts-complete" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=js-ts-complete" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Golang -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <div class="course-badge new">New</div>
+                        <h3>Go (Golang) for Cloud</h3>
+                        <p class="course-brief">Cloud-native development with Go</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=golang" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=golang" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- DSA -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <div class="course-badge popular">Popular</div>
+                        <h3>Data Structures & Algorithms</h3>
+                        <p class="course-brief">DSA fundamentals for interviews and problem solving</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 14 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=dsa" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=dsa" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- System Design -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <div class="course-badge hot">Hot</div>
+                        <h3>System Design & Architecture</h3>
+                        <p class="course-brief">Scalable system design and architecture patterns</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 12 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=system-design" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=system-design" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Clean Code -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Clean Code & Design Patterns</h3>
+                        <p class="course-brief">Software engineering best practices and patterns</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=clean-code" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=clean-code" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<!-- TRACK 7: UI/UX DESIGN -->
+            <section id="design" class="course-category" data-category="design">
+                <div class="category-header">
+                    <div class="category-icon">🎨</div>
+                    <div>
+                        <h2 class="category-title">Track 7: UI/UX Design</h2>
+                        <p class="category-description">User experience design and modern design systems • 5 Courses</p>
+                    </div>
+                </div>
+
+                <div class="courses-grid">
+                    <!-- UI/UX Fundamentals -->
+                    <div class="course-card" data-level="beginner" data-mode="hybrid">
+                        <div class="course-badge popular">Popular</div>
+                        <h3>UI/UX Design Fundamentals</h3>
+                        <p class="course-brief">Design principles and user experience basics</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Beginner</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=uiux-basics" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=uiux-basics" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Figma -->
+                    <div class="course-card" data-level="beginner" data-mode="online">
+                        <div class="course-badge hot">Hot</div>
+                        <h3>Figma Complete (Design to Prototype)</h3>
+                        <p class="course-brief">Master Figma from design to interactive prototypes</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Beginner</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=figma" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=figma" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Advanced CSS -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Advanced CSS & Tailwind</h3>
+                        <p class="course-brief">Modern CSS techniques and utility-first frameworks</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=advanced-css" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=advanced-css" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Design Systems -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <div class="course-badge new">New</div>
+                        <h3>Design Systems & Component Libraries</h3>
+                        <p class="course-brief">Build and maintain scalable design systems</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=design-systems" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=design-systems" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Accessibility -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Accessibility & User Testing</h3>
+                        <p class="course-brief">Inclusive design and accessibility standards</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 6 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=accessibility" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=accessibility" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<!-- TRACK 8: CLOUD & DEVOPS -->
+            <section id="cloud-devops" class="course-category" data-category="cloud-devops">
+                <div class="category-header">
+                    <div class="category-icon">☁️</div>
+                    <div>
+                        <h2 class="category-title">Track 8: Cloud & DevOps</h2>
+                        <p class="category-description">Modern infrastructure, CI/CD, and cloud platforms • 10 Courses</p>
+                    </div>
+                </div>
+
+                <div class="courses-grid">
+                    <!-- AWS -->
+                    <div class="course-card" data-level="beginner" data-mode="hybrid">
+                        <div class="course-badge popular">Popular</div>
+                        <h3>AWS Fundamentals to Advanced</h3>
+                        <p class="course-brief">Complete AWS cloud platform from basics to advanced services</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 16 Weeks</span>
+                            <span class="level">📊 Beginner</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=aws-complete" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=aws-complete" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Azure -->
+                    <div class="course-card" data-level="beginner" data-mode="hybrid">
+                        <div class="course-badge hot">Hot</div>
+                        <h3>Microsoft Azure Complete</h3>
+                        <p class="course-brief">Azure fundamentals, services, and AI capabilities</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 14 Weeks</span>
+                            <span class="level">📊 Beginner</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=azure-complete" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=azure-complete" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Docker & Kubernetes -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <h3>Docker & Kubernetes</h3>
+                        <p class="course-brief">Containerization and orchestration for modern applications</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 12 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=docker-k8s" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=docker-k8s" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- CI/CD -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>CI/CD Pipelines</h3>
+                        <p class="course-brief">Jenkins, GitHub Actions, and automated deployment workflows</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=cicd-pipelines" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=cicd-pipelines" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Terraform -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <div class="course-badge new">New</div>
+                        <h3>Terraform & Infrastructure as Code</h3>
+                        <p class="course-brief">Multi-cloud infrastructure automation with Terraform</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=terraform-iac" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=terraform-iac" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- GCP -->
+                    <div class="course-card" data-level="beginner" data-mode="hybrid">
+                        <h3>Google Cloud Platform (GCP)</h3>
+                        <p class="course-brief">GCP services and Vertex AI platform</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 12 Weeks</span>
+                            <span class="level">📊 Beginner</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=gcp" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=gcp" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Monitoring -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Monitoring & Observability</h3>
+                        <p class="course-brief">Prometheus, Grafana, and ELK stack for system monitoring</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=monitoring" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=monitoring" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- DevOps Best Practices -->
+                    <div class="course-card" data-level="advanced" data-mode="hybrid">
+                        <h3>DevOps Best Practices & SRE</h3>
+                        <p class="course-brief">Site Reliability Engineering and DevOps methodologies</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=devops-sre" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=devops-sre" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+
+                    <!-- Cloud Security -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Cloud Security Fundamentals</h3>
+                        <p class="course-brief">Zero trust, IAM, and cloud security best practices</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=cloud-security" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=cloud-security" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- GitOps -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <h3>GitOps & Deployment Strategies</h3>
+                        <p class="course-brief">ArgoCD, Flux, and modern deployment patterns</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=gitops" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=gitops" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<!-- TRACK 9: SALESFORCE -->
+            <section id="salesforce" class="course-category" data-category="salesforce">
+                <div class="category-header">
+                    <div class="category-icon">💼</div>
+                    <div>
+                        <h2 class="category-title">Track 9: Salesforce Ecosystem</h2>
+                        <p class="category-description">Complete Salesforce platform from Admin to Developer • 15 Courses</p>
+                    </div>
+                </div>
+
+                <div class="courses-grid">
+                    <!-- Salesforce Admin -->
+                    <div class="course-card" data-level="beginner" data-mode="hybrid">
+                        <div class="course-badge popular">Popular</div>
+                        <h3>Salesforce Administrator (ADM-201)</h3>
+                        <p class="course-brief">Admin certification preparation and core platform skills</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Beginner</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=sf-admin" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=sf-admin" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Advanced Admin -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Salesforce Advanced Administrator</h3>
+                        <p class="course-brief">Advanced admin skills and complex configurations</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=sf-adv-admin" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=sf-adv-admin" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Developer -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <div class="course-badge hot">Hot</div>
+                        <h3>Salesforce Developer (Apex & Visualforce)</h3>
+                        <p class="course-brief">Platform development with Apex and Visualforce</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 12 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=sf-developer" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=sf-developer" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- LWC -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <div class="course-badge new">New</div>
+                        <h3>Lightning Web Components (LWC)</h3>
+                        <p class="course-brief">Modern UI development with Lightning Web Components</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=sf-lwc" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=sf-lwc" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Flow Automation -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Salesforce Flow & Process Automation</h3>
+                        <p class="course-brief">Declarative automation with Flow Builder</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=sf-flow" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=sf-flow" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Einstein AI -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <div class="course-badge hot">Hot</div>
+                        <h3>Salesforce Einstein AI</h3>
+                        <p class="course-brief">AI-powered CRM features and predictive analytics</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=sf-einstein" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=sf-einstein" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- AI Cloud -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <div class="course-badge new">New</div>
+                        <h3>Salesforce AI Cloud & Prompt Builder</h3>
+                        <p class="course-brief">Latest AI platform and generative AI capabilities</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=sf-ai-cloud" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=sf-ai-cloud" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Data Cloud -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Salesforce Data Cloud & Analytics</h3>
+                        <p class="course-brief">Customer 360 and unified data platform</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=sf-data-cloud" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=sf-data-cloud" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- CPQ -->
+                    <div class="course-card" data-level="advanced" data-mode="hybrid">
+                        <div class="course-badge hot">Hot</div>
+                        <h3>Salesforce CPQ (Configure, Price, Quote)</h3>
+                        <p class="course-brief">High-demand CPQ specialization for sales automation</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 12 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=sf-cpq" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=sf-cpq" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Revenue Cloud -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <h3>Salesforce Revenue Cloud & Billing</h3>
+                        <p class="course-brief">Revenue lifecycle management and billing automation</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=sf-revenue" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=sf-revenue" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Service Cloud -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <h3>Salesforce Service Cloud</h3>
+                        <p class="course-brief">Customer service and support platform</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=sf-service" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=sf-service" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Marketing Cloud -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Salesforce Marketing Cloud</h3>
+                        <p class="course-brief">Marketing automation and customer journeys</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=sf-marketing" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=sf-marketing" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Integration -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <h3>Salesforce Integration & APIs</h3>
+                        <p class="course-brief">REST/SOAP APIs and integration architecture</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=sf-integration" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=sf-integration" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- MuleSoft -->
+                    <div class="course-card" data-level="advanced" data-mode="hybrid">
+                        <h3>MuleSoft & Anypoint Platform</h3>
+                        <p class="course-brief">Enterprise integration with MuleSoft</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=mulesoft" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=mulesoft" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- DevOps -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <h3>Salesforce DevOps & CI/CD</h3>
+                        <p class="course-brief">Deployment automation and DevOps practices</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=sf-devops" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=sf-devops" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<!-- TRACK 10: AUTOMATION & RPA -->
+            <section id="automation" class="course-category" data-category="automation">
+                <div class="category-header">
+                    <div class="category-icon">⚙️</div>
+                    <div>
+                        <h2 class="category-title">Track 10: Automation & RPA</h2>
+                        <p class="category-description">Robotic Process Automation and business workflow automation • 9 Courses</p>
+                    </div>
+                </div>
+
+                <div class="courses-grid">
+                    <!-- UiPath -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <div class="course-badge popular">Popular</div>
+                        <h3>UiPath RPA Developer</h3>
+                        <p class="course-brief">Complete robotic process automation with UiPath</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=uipath-rpa" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=uipath-rpa" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Power Automate -->
+                    <div class="course-card" data-level="beginner" data-mode="online">
+                        <div class="course-badge hot">Hot</div>
+                        <h3>Microsoft Power Automate</h3>
+                        <p class="course-brief">Cloud and desktop automation flows</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Beginner</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=power-automate" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=power-automate" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- UnifyApps -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <div class="course-badge new">New</div>
+                        <h3>UnifyApps Platform</h3>
+                        <p class="course-brief">Unified automation and integration platform</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=unifyapps" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=unifyapps" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Zapier -->
+                    <div class="course-card" data-level="beginner" data-mode="online">
+                        <h3>Zapier & No-Code Automation</h3>
+                        <p class="course-brief">Workflow automation without coding</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 6 Weeks</span>
+                            <span class="level">📊 Beginner</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=zapier" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=zapier" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Low-Code Development -->
+                    <div class="course-card" data-level="beginner" data-mode="online">
+                        <h3>Low-Code Development Fundamentals</h3>
+                        <p class="course-brief">Build applications with low-code platforms</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Beginner</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=low-code" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=low-code" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Power Platform -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <div class="course-badge popular">Popular</div>
+                        <h3>Microsoft Power Platform</h3>
+                        <p class="course-brief">Complete Power Apps, Power Automate, and Power BI</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 12 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=power-platform" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=power-platform" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- AI Automation -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <div class="course-badge hot">Hot</div>
+                        <h3>AI-Powered Business Automation</h3>
+                        <p class="course-brief">Intelligent automation with AI and ML</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=ai-automation" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=ai-automation" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Process Mining -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Process Mining & Optimization</h3>
+                        <p class="course-brief">Business process analysis and optimization</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=process-mining" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=process-mining" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Automation Anywhere -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <h3>Automation Anywhere</h3>
+                        <p class="course-brief">Enterprise RPA with Automation Anywhere</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=automation-anywhere" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=automation-anywhere" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<!-- TRACK 11: MOBILE APP DEVELOPMENT -->
+            <section id="mobile" class="course-category" data-category="mobile">
+                <div class="category-header">
+                    <div class="category-icon">📱</div>
+                    <div>
+                        <h2 class="category-title">Track 11: Mobile App Development</h2>
+                        <p class="category-description">Cross-platform and native mobile app development • 6 Courses</p>
+                    </div>
+                </div>
+
+                <div class="courses-grid">
+                    <!-- Flutter -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <div class="course-badge popular">Popular</div>
+                        <h3>Flutter Complete</h3>
+                        <p class="course-brief">Cross-platform mobile development with Flutter</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 14 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=flutter" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=flutter" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- React Native -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <div class="course-badge hot">Hot</div>
+                        <h3>React Native Complete</h3>
+                        <p class="course-brief">Build mobile apps with JavaScript and React</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 12 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=react-native" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=react-native" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- iOS -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>iOS Development (Swift & SwiftUI)</h3>
+                        <p class="course-brief">Native iOS app development for Apple ecosystem</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 14 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=ios-swift" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=ios-swift" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Android -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Android Development (Kotlin & Jetpack Compose)</h3>
+                        <p class="course-brief">Modern Android app development with Kotlin</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 14 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=android-kotlin" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=android-kotlin" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Backend -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Mobile Backend & APIs</h3>
+                        <p class="course-brief">Backend services with Firebase and Supabase</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=mobile-backend" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=mobile-backend" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Mobile CI/CD -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <h3>Mobile App Deployment & CI/CD</h3>
+                        <p class="course-brief">Automated deployment to app stores</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 6 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=mobile-cicd" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=mobile-cicd" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<!-- TRACK 12: CYBERSECURITY -->
+            <section id="security" class="course-category" data-category="security">
+                <div class="category-header">
+                    <div class="category-icon">🔒</div>
+                    <div>
+                        <h2 class="category-title">Track 12: Cybersecurity</h2>
+                        <p class="category-description">Security fundamentals, ethical hacking, and threat protection • 6 Courses</p>
+                    </div>
+                </div>
+
+                <div class="courses-grid">
+                    <!-- Cybersecurity Fundamentals -->
+                    <div class="course-card" data-level="beginner" data-mode="hybrid">
+                        <div class="course-badge popular">Popular</div>
+                        <h3>Cybersecurity Fundamentals</h3>
+                        <p class="course-brief">Security basics and core principles</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Beginner</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=security-basics" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=security-basics" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Ethical Hacking -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <div class="course-badge hot">Hot</div>
+                        <h3>Ethical Hacking & Penetration Testing</h3>
+                        <p class="course-brief">Offensive security and penetration testing</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 12 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=ethical-hacking" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=ethical-hacking" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Cloud Security -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Cloud Security (AWS, Azure, GCP)</h3>
+                        <p class="course-brief">Secure cloud infrastructure and services</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=cloud-sec" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=cloud-sec" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Application Security -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Application Security (OWASP, Secure Coding)</h3>
+                        <p class="course-brief">Secure software development practices</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=appsec" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=appsec" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Network Security -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <h3>Network Security & Firewall</h3>
+                        <p class="course-brief">Network protection and firewall management</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=network-sec" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=network-sec" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- SOC Operations -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <h3>Security Operations & Incident Response</h3>
+                        <p class="course-brief">SOC operations and incident management</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=soc-ops" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=soc-ops" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TRACK 13: DATA STRUCTURES & ALGORITHMS -->
+            <section id="dsa" class="course-category" data-category="dsa">
+                <div class="category-header">
+                    <div class="category-icon">🔢</div>
+                    <div>
+                        <h2 class="category-title">Track 13: Data Structures & Algorithms</h2>
+                        <p class="category-description">Master fundamental and advanced data structures and algorithms • 6 Courses</p>
+                    </div>
+                </div>
+
+                <div class="courses-grid">
+                    <!-- Course 1 -->
+                    <div class="course-card" data-level="beginner" data-mode="online">
+                        <h3>Data Structures Fundamentals</h3>
+                        <p class="course-brief">Arrays, Linked Lists, Stacks, Queues - Essential foundations</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Beginner</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=dsa-fundamentals" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=dsa-fundamentals" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 2 -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Trees & Graphs</h3>
+                        <p class="course-brief">Binary Trees, BST, AVL, Graphs, BFS, DFS and traversal algorithms</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=trees-graphs" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=trees-graphs" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 3 -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Sorting & Searching Algorithms</h3>
+                        <p class="course-brief">QuickSort, MergeSort, Binary Search and optimization techniques</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=sorting-searching" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=sorting-searching" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 4 -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <h3>Dynamic Programming</h3>
+                        <p class="course-brief">Master DP patterns - memoization, tabulation, optimization</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=dynamic-programming" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=dynamic-programming" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 5 -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <h3>Hash Tables & Advanced Structures</h3>
+                        <p class="course-brief">Hashing, Heaps, Tries, Segment Trees and advanced data structures</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=hash-advanced-ds" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=hash-advanced-ds" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 6 -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <h3>Algorithm Design & Complexity Analysis</h3>
+                        <p class="course-brief">Big-O notation, time/space complexity, algorithm design patterns</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=algorithm-design-analysis" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=algorithm-design-analysis" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TRACK 14: AI TOOLS FOR NON-TECHNICAL PROFESSIONALS -->
+            <section id="ai-nocode" class="course-category" data-category="ai-nocode">
+                <div class="category-header">
+                    <div class="category-icon">🤖</div>
+                    <div>
+                        <h2 class="category-title">Track 14: AI Tools for Non-Technical Professionals</h2>
+                        <p class="category-description">Master AI tools without coding - for Mechanical, Civil, Electrical engineers and all non-CS professionals • 8 Courses</p>
+                    </div>
+                </div>
+
+                <div class="courses-grid">
+                    <!-- Course 1 -->
+                    <div class="course-card" data-level="beginner" data-mode="online">
+                        <h3>ChatGPT Mastery for Professionals</h3>
+                        <p class="course-brief">Master ChatGPT for research, writing, analysis and problem-solving</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 4 Weeks</span>
+                            <span class="level">📊 Beginner</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=chatgpt-mastery" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=chatgpt-mastery" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 2 -->
+                    <div class="course-card" data-level="beginner" data-mode="online">
+                        <h3>Claude AI for Engineers</h3>
+                        <p class="course-brief">Use Claude for technical documentation, code review and analysis</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 3 Weeks</span>
+                            <span class="level">📊 Beginner</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=claude-engineers" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=claude-engineers" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 3 -->
+                    <div class="course-card" data-level="beginner" data-mode="online">
+                        <h3>Gemini & Google AI Tools</h3>
+                        <p class="course-brief">Leverage Google's AI for productivity, research and automation</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 3 Weeks</span>
+                            <span class="level">📊 Beginner</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=gemini-ai" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=gemini-ai" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 4 -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Canva AI for Design</h3>
+                        <p class="course-brief">Create professional designs using Canva's AI-powered tools</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 4 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=canva-ai-design" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=canva-ai-design" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 5 -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Microsoft Copilot for Productivity</h3>
+                        <p class="course-brief">Boost productivity with AI in Word, Excel, PowerPoint and Outlook</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 5 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=copilot-productivity" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=copilot-productivity" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 6 -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Notion AI for Project Management</h3>
+                        <p class="course-brief">Organize projects, tasks and documentation with Notion AI</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 4 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=notion-ai-pm" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=notion-ai-pm" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 7 -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <h3>AI Image & Video Generation</h3>
+                        <p class="course-brief">Create stunning visuals with MidJourney, DALL-E, Runway and more</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 6 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=ai-image-video" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=ai-image-video" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 8 -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <h3>AI Workflow Automation (No-Code)</h3>
+                        <p class="course-brief">Automate workflows using Zapier, Make.com and AI agents</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 6 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=ai-workflow-automation" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=ai-workflow-automation" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TRACK 15: DATABASES & DATA MANAGEMENT -->
+            <section id="databases" class="course-category" data-category="databases">
+                <div class="category-header">
+                    <div class="category-icon">💾</div>
+                    <div>
+                        <h2 class="category-title">Track 15: Databases & Data Management</h2>
+                        <p class="category-description">Master SQL, NoSQL, and modern database technologies for production systems • 11 Courses</p>
+                    </div>
+                </div>
+
+                <div class="courses-grid">
+                    <!-- Course 1 -->
+                    <div class="course-card" data-level="beginner" data-mode="online">
+                        <div class="course-badge popular">Popular</div>
+                        <h3>SQL Fundamentals & Advanced</h3>
+                        <p class="course-brief">Complete SQL from basics to complex queries, joins, subqueries, optimization</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Beginner</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=sql-fundamentals-advanced" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=sql-fundamentals-advanced" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 2 -->
+                    <div class="course-card" data-level="intermediate" data-mode="hybrid">
+                        <div class="course-badge popular">Popular</div>
+                        <h3>PostgreSQL Complete</h3>
+                        <p class="course-brief">Master PostgreSQL - world's most advanced open-source relational database</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=postgresql-complete" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=postgresql-complete" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 3 -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <div class="course-badge popular">Popular</div>
+                        <h3>MySQL Mastery</h3>
+                        <p class="course-brief">MySQL database administration, optimization, replication, and scaling</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=mysql-mastery" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=mysql-mastery" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 4 -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <div class="course-badge hot">Hot</div>
+                        <h3>MongoDB (NoSQL)</h3>
+                        <p class="course-brief">Document database, aggregation pipeline, indexing, and sharding</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=mongodb-nosql" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=mongodb-nosql" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 5 -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Redis & Caching Strategies</h3>
+                        <p class="course-brief">In-memory data store, caching, session management, and real-time apps</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 6 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=redis-caching" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=redis-caching" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 6 -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <h3>Apache Cassandra (Distributed DB)</h3>
+                        <p class="course-brief">Highly scalable NoSQL database for massive datasets and high availability</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=cassandra-distributed" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=cassandra-distributed" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 7 -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <h3>Neo4j (Graph Database)</h3>
+                        <p class="course-brief">Graph databases, Cypher query language, relationship modeling</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=neo4j-graph-db" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=neo4j-graph-db" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 8 -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <div class="course-badge new">New</div>
+                        <h3>Vector Databases for AI</h3>
+                        <p class="course-brief">Pinecone, Chroma, Weaviate - Vector search for LLMs and embeddings</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=vector-databases-ai" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=vector-databases-ai" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 9 -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <h3>Elasticsearch & Search Analytics</h3>
+                        <p class="course-brief">Full-text search, log analytics, ELK stack (Elasticsearch, Logstash, Kibana)</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=elasticsearch-search" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=elasticsearch-search" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 10 -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Database Design & Optimization</h3>
+                        <p class="course-brief">Normalization, indexing, query optimization, performance tuning</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=database-design-optimization" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=database-design-optimization" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 11 -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <div class="course-badge popular">Popular</div>
+                        <h3>Oracle PL/SQL Programming</h3>
+                        <p class="course-brief">Stored procedures, triggers, packages, cursors and advanced PL/SQL</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=oracle-plsql" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=oracle-plsql" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TRACK 16: QUANTUM COMPUTING -->
+            <section id="quantum" class="course-category" data-category="quantum">
+                <div class="category-header">
+                    <div class="category-icon">⚛️</div>
+                    <div>
+                        <h2 class="category-title">Track 16: Quantum Computing</h2>
+                        <p class="category-description">Enter the quantum realm - Learn quantum algorithms, programming, and applications for next-gen computing • 8 Courses</p>
+                    </div>
+                </div>
+
+                <div class="courses-grid">
+                    <!-- Course 1 -->
+                    <div class="course-card" data-level="beginner" data-mode="online">
+                        <div class="course-badge trending">Trending</div>
+                        <h3>Introduction to Quantum Computing</h3>
+                        <p class="course-brief">Quantum mechanics basics, qubits, superposition, entanglement, and quantum gates</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Beginner</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=intro-quantum-computing" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=intro-quantum-computing" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 2 -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <div class="course-badge popular">Popular</div>
+                        <h3>Quantum Programming with Qiskit</h3>
+                        <p class="course-brief">IBM's Qiskit framework - Build quantum circuits, run on simulators and real quantum hardware</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=quantum-programming-qiskit" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=quantum-programming-qiskit" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 3 -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Quantum Algorithms & Applications</h3>
+                        <p class="course-brief">Shor's algorithm, Grover's search, VQE, QAOA, and quantum optimization</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 12 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=quantum-algorithms" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=quantum-algorithms" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 4 -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <h3>Quantum Machine Learning</h3>
+                        <p class="course-brief">Quantum neural networks, variational circuits, quantum kernels for ML</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 12 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=quantum-machine-learning" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=quantum-machine-learning" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 5 -->
+                    <div class="course-card" data-level="intermediate" data-mode="online">
+                        <h3>Microsoft Azure Quantum</h3>
+                        <p class="course-brief">Q# programming, Azure Quantum workspace, quantum simulators and resource estimation</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Intermediate</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=azure-quantum" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=azure-quantum" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 6 -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <h3>Quantum Cryptography & Security</h3>
+                        <p class="course-brief">Quantum key distribution, post-quantum cryptography, quantum-safe encryption</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=quantum-cryptography" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=quantum-cryptography" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 7 -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <div class="course-badge">Enterprise</div>
+                        <h3>Quantum Computing for Finance</h3>
+                        <p class="course-brief">Portfolio optimization, risk analysis, derivatives pricing using quantum algorithms</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 8 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=quantum-finance" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=quantum-finance" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Course 8 -->
+                    <div class="course-card" data-level="advanced" data-mode="online">
+                        <div class="course-badge">Enterprise</div>
+                        <h3>Quantum Computing for Drug Discovery</h3>
+                        <p class="course-brief">Molecular simulation, protein folding, drug-protein binding using quantum methods</p>
+                        <div class="course-meta">
+                            <span class="duration">⏱️ 10 Weeks</span>
+                            <span class="level">📊 Advanced</span>
+                        </div>
+                        <div class="course-actions">
+                            <a href="course-detail.html?course=quantum-drug-discovery" class="course-link-secondary">View Details</a>
+                            <a href="contact.html?course=quantum-drug-discovery" class="course-link">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Tharai EdTech</h4>
+                    <p>A proud member of the Tharai Group, empowering learners with industry-relevant education and professional training programs.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="courses.html">All Courses</a></li>
+                        <li><a href="index.html#trainings">Corporate Training</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>📧 Email: info@tharai.edu</p>
+                    <p>📞 Phone: +91 XXX XXX XXXX</p>
+                    <p>📍 Address: [Your Address]</p>
+                    <p>🕒 Mon-Sat: 9:00 AM - 6:00 PM</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Tharai Group Companies</h4>
+                    <ul>
+                        <li><a href="https://www.tharaitravels.com/index.html" target="_blank">Tharai Travels</a></li>
+                        <li><a href="#">Tharai Chits</a></li>
+                        <li><a href="#">Tharai Medical Agencies</a></li>
+                        <li><a href="index.html" class="footer-current">Tharai EdTech</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tharai EdTech. A proud member of the Tharai Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Course Enrollment Modal Placeholder -->
+    <div id="enrollmentModalPlaceholder"></div>
+
+    <!-- Scripts -->
+    <script src="scripts/api-config.js?v=82.0"></script>
+    <script src="scripts/auth.js?v=82.0"></script>
+    <script src="scripts/auth-ui.js?v=82.0"></script>
+    <script src="scripts/enrollment.js?v=82.0"></script>
+    <script src="scripts/main.js?v=48.0"></script>
+    <script src="scripts/courses.js?v=48.0"></script>
+    <script src="scripts/chat-widget.js?v=1.0"></script>
+
+    <!-- Load Enrollment Modal Component -->
+    <script>
+        // Add timestamp to force cache refresh
+        const timestamp = new Date().getTime();
+        fetch('enrollment-modal-component.html?v=67.0&t=' + timestamp)
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('enrollmentModalPlaceholder').innerHTML = html;
+
+                // NOW attach the enrollment form event listener AFTER the form is loaded
+                const enrollmentForm = document.getElementById('courseEnrollmentForm');
+                if (enrollmentForm && window.attachEnrollmentFormListener) {
+                    window.attachEnrollmentFormListener(enrollmentForm);
+                    console.log('✅ Enrollment form listener attached!');
+                }
+            });
+    </script>
+
+    <!-- Update all Enroll Now buttons to use modal -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Find all "Enroll Now" links
+            const enrollLinks = document.querySelectorAll('a.course-link[href*="contact.html"]');
+
+            enrollLinks.forEach(link => {
+                const href = link.getAttribute('href');
+
+                // Extract course ID from URL if present
+                const urlParams = new URLSearchParams(href.split('?')[1] || '');
+                const courseParam = urlParams.get('course') || '';
+
+                // Find the course card parent
+                const courseCard = link.closest('.course-card');
+                const courseTitle = courseCard ? courseCard.querySelector('h3').textContent.trim() : '';
+
+                // Find the track name from the enclosing track section
+                const trackSection = link.closest('.course-category');
+                const trackTitleEl = trackSection ? trackSection.querySelector('.category-title') : null;
+                const trackName = trackTitleEl ? trackTitleEl.textContent.trim() : '';
+
+                // Get course icon (try to find from title or use default)
+                let courseIcon = '📚';
+                if (courseTitle.includes('AI') || courseTitle.includes('ML') || courseTitle.includes('Machine')) {
+                    courseIcon = '🤖';
+                } else if (courseTitle.includes('Data')) {
+                    courseIcon = '📊';
+                } else if (courseTitle.includes('Cloud') || courseTitle.includes('AWS') || courseTitle.includes('Azure')) {
+                    courseIcon = '☁️';
+                } else if (courseTitle.includes('Web') || courseTitle.includes('Full Stack')) {
+                    courseIcon = '💻';
+                } else if (courseTitle.includes('Mobile') || courseTitle.includes('Flutter') || courseTitle.includes('React Native')) {
+                    courseIcon = '📱';
+                } else if (courseTitle.includes('Security') || courseTitle.includes('Cybersecurity')) {
+                    courseIcon = '🔒';
+                } else if (courseTitle.includes('Salesforce')) {
+                    courseIcon = '⚡';
+                } else if (courseTitle.includes('Design') || courseTitle.includes('UI/UX')) {
+                    courseIcon = '🎨';
+                } else if (courseTitle.includes('Database') || courseTitle.includes('SQL')) {
+                    courseIcon = '🗄️';
+                }
+
+                // Replace link behavior with modal open
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    openCourseEnrollmentModal(courseTitle, trackName, courseIcon);
+                });
+
+                // Update link text for clarity
+                link.textContent = 'Enroll Now';
+            });
+        });
+    </script>
+
+    <!-- Load Auth Modals Component -->
+    <script>
+        fetch('auth-modals.html?v=48.0')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('authModalsPlaceholder').innerHTML = html;
+            });
+    </script>
+</body>
+</html>
