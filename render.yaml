@@ -15,6 +15,12 @@ services:
     # runs here instead, before gunicorn binds, on every start.
     startCommand: python init_db.py && gunicorn --bind 0.0.0.0:$PORT app:app
     envVars:
+      # Render defaults to a very new Python (3.14) that psycopg2-binary
+      # doesn't have a compatible prebuilt wheel for yet, causing an
+      # "undefined symbol: _PyInterpreterState_Get" import crash. Pin to a
+      # mature version with stable wheels instead.
+      - key: PYTHON_VERSION
+        value: 3.11.9
       - key: SECRET_KEY
         generateValue: true
       - key: FLASK_ENV
