@@ -11,8 +11,9 @@ services:
     plan: free
     rootDir: backend
     buildCommand: pip install -r requirements.txt
-    preDeployCommand: python init_db.py
-    startCommand: gunicorn --bind 0.0.0.0:$PORT app:app
+    # preDeployCommand needs a paid plan, so the (idempotent) schema bootstrap
+    # runs here instead, before gunicorn binds, on every start.
+    startCommand: python init_db.py && gunicorn --bind 0.0.0.0:$PORT app:app
     envVars:
       - key: SECRET_KEY
         generateValue: true
