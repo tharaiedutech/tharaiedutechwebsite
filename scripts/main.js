@@ -67,18 +67,20 @@ document.addEventListener('DOMContentLoaded', function() {
     let lastScroll = 0;
     const header = document.querySelector('.header');
     
-    window.addEventListener('scroll', function() {
-        const currentScroll = window.pageYOffset;
-        
-        // Add shadow when scrolled
-        if (currentScroll > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-        
-        lastScroll = currentScroll;
-    });
+    if (header) {
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset;
+
+            // Add shadow when scrolled
+            if (currentScroll > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            lastScroll = currentScroll;
+        });
+    }
     
     // Intersection Observer for Animation on Scroll
     const observerOptions = {
